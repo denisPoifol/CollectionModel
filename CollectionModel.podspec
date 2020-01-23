@@ -8,35 +8,19 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CollectionModel'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of CollectionModel.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '0.0.1'
+  s.summary          = 'ViewModels for collectionViews and tableViews.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+CollectionModel provide two struct to represente viewModels for collectionViews and tableViews. This viewModel are meant to be dull and contains no logic at all and be completely descriptives of the views they represent.
                        DESC
 
-  s.homepage         = 'https://github.com/Denis Poifol/CollectionModel'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/denisPoifol/CollectionModel'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Denis Poifol' => 'denis.poifol@gmail.com' }
-  s.source           = { :git => 'https://github.com/Denis Poifol/CollectionModel.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/denisPoifol/CollectionModel.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/DenisPoifol'
 
+  s.swift_versions = ['5.0', '5.1']
   s.ios.deployment_target = '8.0'
-
   s.source_files = 'CollectionModel/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'CollectionModel' => ['CollectionModel/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
