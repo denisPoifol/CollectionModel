@@ -1,6 +1,6 @@
 # CollectionModel
 
-![CI](https://github.com/denisPoifol/CollectionModel/workflows/CI/badge.svg)
+[![CI](https://github.com/denisPoifol/CollectionModel/workflows/CI/badge.svg)](https://github.com/denisPoifol/CollectionModel/actions?query=workflow%3ACI)
 [![Version](https://img.shields.io/cocoapods/v/CollectionModel.svg?style=flat)](https://cocoapods.org/pods/CollectionModel)
 [![License](https://img.shields.io/cocoapods/l/CollectionModel.svg?style=flat)](https://cocoapods.org/pods/CollectionModel)
 [![Platform](https://img.shields.io/cocoapods/p/CollectionModel.svg?style=flat)](https://cocoapods.org/pods/CollectionModel)
