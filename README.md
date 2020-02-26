@@ -1,6 +1,6 @@
 # CollectionModel
 
-[![CI Status](https://img.shields.io/travis/Denis Poifol/CollectionModel.svg?style=flat)](https://travis-ci.org/Denis Poifol/CollectionModel)
+![CI](https://github.com/denisPoifol/CollectionModel/workflows/CI/badge.svg)
 [![Version](https://img.shields.io/cocoapods/v/CollectionModel.svg?style=flat)](https://cocoapods.org/pods/CollectionModel)
 [![License](https://img.shields.io/cocoapods/l/CollectionModel.svg?style=flat)](https://cocoapods.org/pods/CollectionModel)
 [![Platform](https://img.shields.io/cocoapods/p/CollectionModel.svg?style=flat)](https://cocoapods.org/pods/CollectionModel)
