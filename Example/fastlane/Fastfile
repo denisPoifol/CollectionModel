@@ -1,0 +1,10 @@
+desc "Run unit tests"
+lane :tests do
+  scan(
+    workspace: "CollectionModel.xcworkspace",
+    configuration: "Debug",
+    scheme: "CollectionModel-Example",
+    clean: true,
+    devices: ["iPhone 8"]
+  )
+end

@@ -40,21 +40,21 @@ Carthage/Build
 
 ##Fastlane
 # fastlane specific
-fastlane/report.xml
+Example/fastlane/report.xml
 
 # deliver temporary files
-fastlane/Preview.html
+Example/fastlane/Preview.html
 
 # snapshot generated screenshots
-fastlane/screenshots
+Example/fastlane/screenshots
 
 # scan temporary files
-fastlane/test_output
+Example/fastlane/test_output
 
 #fastlane bundler
-fastlane/Gemfile
-fastlane/Gemfile.lock
-fastlane/.bundle/config
+Example/fastlane/Gemfile
+Example/fastlane/Gemfile.loc
+Example/fastlane/.bundle/config
 
 #Fastlane Plugins
 Pluginfile_fastlane
