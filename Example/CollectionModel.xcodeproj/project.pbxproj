@@ -127,7 +127,6 @@
 				927B9F1824096DB100AA4FD1 /* Shared */,
 				9294333E2405835F0057D6CD /* MainViewController */,
 				9281A9A72417A71500F732AA /* TableViewController */,
-				927B9F1424096D7700AA4FD1 /* TableViewModel */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -178,37 +177,6 @@
 				55CCB1E9F54F2A0D87ACEDA6 /* Pods_CollectionModel_Tests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		927B9F1424096D7700AA4FD1 /* TableViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				927B9F1524096D8400AA4FD1 /* Simple */,
-				927B9F1624096D8E00AA4FD1 /* MultipleCellType */,
-				927B9F1724096D9900AA4FD1 /* MultipleHeaderFooter */,
-			);
-			name = TableViewModel;
-			sourceTree = "<group>";
-		};
-		927B9F1524096D8400AA4FD1 /* Simple */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Simple;
-			sourceTree = "<group>";
-		};
-		927B9F1624096D8E00AA4FD1 /* MultipleCellType */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MultipleCellType;
-			sourceTree = "<group>";
-		};
-		927B9F1724096D9900AA4FD1 /* MultipleHeaderFooter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MultipleHeaderFooter;
 			sourceTree = "<group>";
 		};
 		927B9F1824096DB100AA4FD1 /* Shared */ = {
