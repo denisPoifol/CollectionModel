@@ -33,7 +33,7 @@ class MainViewController: UIViewController,
     func mainViewControllerDataSource(_ dataSource: MainViewControllerDataSource,
                                       didSelectCell: MainSectionCellViewModel) {
         // TODO: (Denis Poifol) 10/03/2020 ChangeViewController according to selected cell
-        let viewController = UIViewController()
+        let viewController = TableViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
