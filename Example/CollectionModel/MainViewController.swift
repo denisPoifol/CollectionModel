@@ -31,9 +31,23 @@ class MainViewController: UIViewController,
     // MARK: - MainViewControllerDataSourceDelegate
 
     func mainViewControllerDataSource(_ dataSource: MainViewControllerDataSource,
-                                      didSelectCell: MainSectionCellViewModel) {
-        // TODO: (Denis Poifol) 10/03/2020 ChangeViewController according to selected cell
-        let viewController = TableViewController()
+                                      didSelectCell cell: MainSectionCellViewModel) {
+        let viewController: UIViewController
+        switch cell {
+        case .simpleTableViewCell:
+            viewController = TableViewController<SimpleTableViewDataSource>()
+        case .multipleTableViewCells:
+            viewController = TableViewController<MultipleCellTypesTableViewDataSource>()
+        case .multipleHeaderFooterTypes:
+            viewController = UIViewController()
+        case .simpleCollectionViewCell:
+            viewController = UIViewController()
+        case .multipleCollectionViewCells:
+            viewController = UIViewController()
+        case .multipleSupplementaryViews:
+            viewController = UIViewController()
+        }
         navigationController?.pushViewController(viewController, animated: true)
+        // TODO: (Denis Poifol) 10/03/2020 ChangeViewController according to selected cell
     }
 }

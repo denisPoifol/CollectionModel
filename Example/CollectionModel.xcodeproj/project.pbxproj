@@ -20,6 +20,9 @@
 		9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */; };
 		9281A9AF2417A93700F732AA /* ATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9AD2417A93700F732AA /* ATableViewCell.swift */; };
 		9281A9B02417A93700F732AA /* ATableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9AE2417A93700F732AA /* ATableViewCellModel.swift */; };
+		9281A9B22417ABA300F732AA /* BTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9B12417ABA300F732AA /* BTableViewCell.swift */; };
+		9281A9B42417ABE200F732AA /* BTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9B32417ABE200F732AA /* BTableViewCellModel.swift */; };
+		9281A9B62417ACE500F732AA /* MultipleCellTypesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9B52417ACE500F732AA /* MultipleCellTypesTableViewDataSource.swift */; };
 		92943341240584030057D6CD /* MainViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92943340240584030057D6CD /* MainViewControllerDataSource.swift */; };
 		F72CE54AC9916CA5C2B53C33 /* Pods_CollectionModel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CCB1E9F54F2A0D87ACEDA6 /* Pods_CollectionModel_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +62,9 @@
 		9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewDataSource.swift; sourceTree = "<group>"; };
 		9281A9AD2417A93700F732AA /* ATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATableViewCell.swift; sourceTree = "<group>"; };
 		9281A9AE2417A93700F732AA /* ATableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATableViewCellModel.swift; sourceTree = "<group>"; };
+		9281A9B12417ABA300F732AA /* BTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTableViewCell.swift; sourceTree = "<group>"; };
+		9281A9B32417ABE200F732AA /* BTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTableViewCellModel.swift; sourceTree = "<group>"; };
+		9281A9B52417ACE500F732AA /* MultipleCellTypesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCellTypesTableViewDataSource.swift; sourceTree = "<group>"; };
 		92943340240584030057D6CD /* MainViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerDataSource.swift; sourceTree = "<group>"; };
 		DA3675C6E86BC62D45E05390 /* Pods-CollectionModel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionModel_Tests.release.xcconfig"; path = "Target Support Files/Pods-CollectionModel_Tests/Pods-CollectionModel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +225,8 @@
 			children = (
 				9281A9AD2417A93700F732AA /* ATableViewCell.swift */,
 				9281A9AE2417A93700F732AA /* ATableViewCellModel.swift */,
+				9281A9B12417ABA300F732AA /* BTableViewCell.swift */,
+				9281A9B32417ABE200F732AA /* BTableViewCellModel.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */,
+				9281A9B52417ACE500F732AA /* MultipleCellTypesTableViewDataSource.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -451,6 +460,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				9281A9AF2417A93700F732AA /* ATableViewCell.swift in Sources */,
+				9281A9B42417ABE200F732AA /* BTableViewCellModel.swift in Sources */,
 				9281A9A92417A72700F732AA /* TableViewController.swift in Sources */,
 				9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -458,6 +468,8 @@
 				9281A9A62417A2EF00F732AA /* SmoothDeselection.swift in Sources */,
 				92943341240584030057D6CD /* MainViewControllerDataSource.swift in Sources */,
 				927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */,
+				9281A9B22417ABA300F732AA /* BTableViewCell.swift in Sources */,
+				9281A9B62417ACE500F732AA /* MultipleCellTypesTableViewDataSource.swift in Sources */,
 				9281A9B02417A93700F732AA /* ATableViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

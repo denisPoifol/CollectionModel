@@ -9,10 +9,16 @@
 import Foundation
 import UIKit
 
-class TableViewController: UIViewController {
+protocol EmptyInit {
+    init()
+}
+
+typealias EmptyInitTableViewDataSource = UITableViewDataSource & UITableViewDelegate & EmptyInit
+
+class TableViewController<DataSource: EmptyInitTableViewDataSource>: UIViewController {
 
     private lazy var tableView = UITableView()
-    private lazy var dataSource = SimpleTableViewDataSource()
+    private lazy var dataSource = DataSource()
 
     override func loadView() {
         view = tableView

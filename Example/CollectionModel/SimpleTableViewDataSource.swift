@@ -13,7 +13,8 @@ import CollectionModel
 // MARK: - SimpleTableViewDataSource
 class SimpleTableViewDataSource: NSObject,
     UITableViewDataSource,
-    UITableViewDelegate {
+    UITableViewDelegate,
+    EmptyInit {
 
     typealias ViewModel = TableViewModel<Never, ATableViewCellModel>
 
@@ -28,6 +29,10 @@ class SimpleTableViewDataSource: NSObject,
             ATableViewCellModel(title: "Or with the default initializer")
         ]
     )
+
+    required override init() {
+        super.init()
+    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // viewModel.count also works
