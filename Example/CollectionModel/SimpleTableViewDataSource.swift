@@ -14,7 +14,8 @@ import CollectionModel
 class SimpleTableViewDataSource: NSObject,
     UITableViewDataSource,
     UITableViewDelegate,
-    EmptyInit {
+    EmptyInit,
+    TableViewContent {
 
     typealias ViewModel = TableViewModel<Never, ATableViewCellModel>
 
@@ -34,6 +35,10 @@ class SimpleTableViewDataSource: NSObject,
         super.init()
     }
 
+    func register(in tableView: UITableView) {
+        tableView.register(cell: .class(ATableViewCell.self))
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         // viewModel.count also works
         viewModel.sections.count
@@ -47,7 +52,7 @@ class SimpleTableViewDataSource: NSObject,
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ATableViewCell()
+        let cell: ATableViewCell = tableView.dequeueCell(at: indexPath)
         cell.configure(with: viewModel[indexPath])
         cell.selectionStyle = .none
         return cell

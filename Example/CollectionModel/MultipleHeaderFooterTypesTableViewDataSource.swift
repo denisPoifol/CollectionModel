@@ -20,7 +20,8 @@ enum MultipleHeaderFooterModel {
 class MultipleHeaderFooterTypesTableViewDataSource: NSObject,
     UITableViewDataSource,
     UITableViewDelegate,
-    EmptyInit {
+    EmptyInit,
+    TableViewContent {
 
     typealias ViewModel = TableViewModel<MultipleHeaderFooterModel, MultipleCellTypesTableViewCellModel>
 
@@ -64,6 +65,13 @@ class MultipleHeaderFooterTypesTableViewDataSource: NSObject,
         super.init()
     }
 
+    func register(in tableView: UITableView) {
+        tableView.register(cell: .class(ATableViewCell.self))
+        tableView.register(cell: .class(BTableViewCell.self))
+        tableView.register(header: .class(ATableViewHeaderFooterView.self))
+        tableView.register(header: .class(BTableViewHeaderFooterView.self))
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         // viewModel.count also works
         viewModel.sections.count
@@ -79,12 +87,12 @@ class MultipleHeaderFooterTypesTableViewDataSource: NSObject,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch viewModel[indexPath] {
         case let .a(cellViewModel):
-            let cell = ATableViewCell()
+            let cell: ATableViewCell = tableView.dequeueCell(at: indexPath)
             cell.configure(with: cellViewModel)
             cell.selectionStyle = .none
             return cell
         case let .b(cellViewModel):
-            let cell = BTableViewCell()
+            let cell: BTableViewCell = tableView.dequeueCell(at: indexPath)
             cell.configure(with: cellViewModel)
             cell.selectionStyle = .none
             return cell
@@ -93,12 +101,12 @@ class MultipleHeaderFooterTypesTableViewDataSource: NSObject,
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerViewModel = viewModel[section].header else { return nil }
-        return headerFooter(for: headerViewModel)
+        return headerFooter(for: headerViewModel, in: tableView)
     }
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard let headerViewModel = viewModel[section].footer else { return nil }
-        return headerFooter(for: headerViewModel)
+        return headerFooter(for: headerViewModel, in: tableView)
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -117,14 +125,15 @@ class MultipleHeaderFooterTypesTableViewDataSource: NSObject,
 
     // MARK: - Private
 
-    private func headerFooter(for viewModel: MultipleHeaderFooterModel) -> UIView {
+    private func headerFooter(for viewModel: MultipleHeaderFooterModel,
+                              in tableView: UITableView) -> UIView {
         switch viewModel {
         case let .aHeaderFooter(headerFooter):
-            let view = ATableViewHeaderFooterView()
+            let view: ATableViewHeaderFooterView = tableView.dequeueHeader()
             view.configure(with: headerFooter)
             return view
         case let .bHeaderFooter(headerFooter):
-            let view = BTableViewHeaderFooterView()
+            let view: BTableViewHeaderFooterView = tableView.dequeueHeader()
             view.configure(with: headerFooter)
             return view
         }

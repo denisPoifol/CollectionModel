@@ -34,6 +34,7 @@
 		92943341240584030057D6CD /* MainViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92943340240584030057D6CD /* MainViewControllerDataSource.swift */; };
 		92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */; };
 		92EE79FE24332EE300B01D52 /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FD24332EE300B01D52 /* RegisterableView.swift */; };
+		92EE7A0024332FCB00B01D52 /* TableViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FF24332FCB00B01D52 /* TableViewContent.swift */; };
 		F72CE54AC9916CA5C2B53C33 /* Pods_CollectionModel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CCB1E9F54F2A0D87ACEDA6 /* Pods_CollectionModel_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		92943340240584030057D6CD /* MainViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerDataSource.swift; sourceTree = "<group>"; };
 		92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewContent.swift; sourceTree = "<group>"; };
 		92EE79FD24332EE300B01D52 /* RegisterableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
+		92EE79FF24332FCB00B01D52 /* TableViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewContent.swift; sourceTree = "<group>"; };
 		DA3675C6E86BC62D45E05390 /* Pods-CollectionModel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionModel_Tests.release.xcconfig"; path = "Target Support Files/Pods-CollectionModel_Tests/Pods-CollectionModel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +215,7 @@
 				9281A9A52417A2EF00F732AA /* SmoothDeselection.swift */,
 				92EE79FD24332EE300B01D52 /* RegisterableView.swift */,
 				92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */,
+				92EE79FF24332FCB00B01D52 /* TableViewContent.swift */,
 				927B9F1E240978E300AA4FD1 /* Layout */,
 				927B9F1924096DB500AA4FD1 /* TableView */,
 				92530997242E1168001875B3 /* EmptyInit.swift */,
@@ -479,6 +482,7 @@
 				9281A9A92417A72700F732AA /* TableViewController.swift in Sources */,
 				9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				92EE7A0024332FCB00B01D52 /* TableViewContent.swift in Sources */,
 				927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */,
 				9281A9BA2417B2BE00F732AA /* ATableViewHeaderFooterView.swift in Sources */,
 				9281A9BC2417C58D00F732AA /* ATableViewHeaderFooterViewModel.swift in Sources */,

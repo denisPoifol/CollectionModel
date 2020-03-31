@@ -20,7 +20,8 @@ enum MultipleCellTypesTableViewCellModel {
 class MultipleCellTypesTableViewDataSource: NSObject,
     UITableViewDataSource,
     UITableViewDelegate,
-    EmptyInit {
+    EmptyInit,
+    TableViewContent {
 
     typealias ViewModel = TableViewModel<Never, MultipleCellTypesTableViewCellModel>
 
@@ -39,6 +40,11 @@ class MultipleCellTypesTableViewDataSource: NSObject,
         super.init()
     }
 
+    func register(in tableView: UITableView) {
+        tableView.register(cell: .class(ATableViewCell.self))
+        tableView.register(cell: .class(BTableViewCell.self))
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         // viewModel.count also works
         viewModel.sections.count
@@ -54,12 +60,12 @@ class MultipleCellTypesTableViewDataSource: NSObject,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch viewModel[indexPath] {
         case let .a(cellViewModel):
-            let cell = ATableViewCell()
+            let cell: ATableViewCell = tableView.dequeueCell(at: indexPath)
             cell.configure(with: cellViewModel)
             cell.selectionStyle = .none
             return cell
         case let .b(cellViewModel):
-            let cell = BTableViewCell()
+            let cell: BTableViewCell = tableView.dequeueCell(at: indexPath)
             cell.configure(with: cellViewModel)
             cell.selectionStyle = .none
             return cell

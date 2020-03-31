@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-typealias EmptyInitTableViewDataSource = UITableViewDataSource & UITableViewDelegate & EmptyInit
+typealias EmptyInitTableViewDataSource = UITableViewDataSource & UITableViewDelegate & EmptyInit & TableViewContent
 
 class TableViewController<DataSource: EmptyInitTableViewDataSource>: UIViewController {
 
@@ -18,6 +18,7 @@ class TableViewController<DataSource: EmptyInitTableViewDataSource>: UIViewContr
 
     override func loadView() {
         view = tableView
+        dataSource.register(in: tableView)
         tableView.backgroundColor = UIColor.white
         tableView.tableFooterView = UIView()
         tableView.dataSource = dataSource
