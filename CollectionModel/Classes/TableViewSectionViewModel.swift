@@ -9,12 +9,8 @@ import Foundation
 
 /// A struct representing as closely as possible the structure of a `UITableView` section.
 /// It is generic over two parameters `HeaderFooterViewModel` and `CellViewModel`
-/// both parameters are self explanatory they should represent the model used to
+/// both parameters are self explanatory, they should represent the model used to
 /// configure the cells of the tableView or the headers and footers
-///
-/// This struct is mainly a wrapper for an array of `TableSectionViewModel`
-/// which is a struct representing a section of `UITableView`
-///
 public struct TableViewSectionViewModel<HeaderFooterViewModel, CellViewModel> {
 
     /// The `SuplementaryViewModel` reprensenting the header of the section

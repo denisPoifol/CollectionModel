@@ -13,10 +13,7 @@ import Foundation
 /// configure the cells of the collectionView or the supplementary views which could
 /// be a header a footer or a custom suplementary view
 ///
-/// This struct is mainly a wrapper for an array of `CollectionSectionViewModel`
-/// which is a struct representing a section of `UICollectionView`
-///
-/// header and footers are stored appart from the suplementary views
+/// header and footer are stored appart from the suplementary views
 public struct CollectionViewSectionViewModel<SupplementaryViewModel, CellViewModel> {
 
     /// Suplementary view are identified by an index path and their kind which is a string
