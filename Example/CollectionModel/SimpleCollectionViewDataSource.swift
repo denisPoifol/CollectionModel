@@ -36,7 +36,7 @@ class SimpleCollectionViewDataSource: NSObject,
     }
 
     func register(in collectionView: UICollectionView) {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellIdentifier")
+        collectionView.register(cell: .class(UICollectionViewCell.self))
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -53,7 +53,7 @@ class SimpleCollectionViewDataSource: NSObject,
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier", for: indexPath)
+        let cell: UICollectionViewCell = collectionView.dequeueCell(at: indexPath)
         let label = UILabel()
         cell.contentView.addSubview(label)
         label.pinToSuperview()
