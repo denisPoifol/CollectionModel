@@ -35,6 +35,8 @@
 		92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */; };
 		92EE79FE24332EE300B01D52 /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FD24332EE300B01D52 /* RegisterableView.swift */; };
 		92EE7A0024332FCB00B01D52 /* TableViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FF24332FCB00B01D52 /* TableViewContent.swift */; };
+		92EE7A042433352900B01D52 /* ACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE7A032433352900B01D52 /* ACollectionViewCell.swift */; };
+		92EE7A062433354D00B01D52 /* ACollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE7A052433354D00B01D52 /* ACollectionViewCellModel.swift */; };
 		F72CE54AC9916CA5C2B53C33 /* Pods_CollectionModel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CCB1E9F54F2A0D87ACEDA6 /* Pods_CollectionModel_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewContent.swift; sourceTree = "<group>"; };
 		92EE79FD24332EE300B01D52 /* RegisterableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
 		92EE79FF24332FCB00B01D52 /* TableViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewContent.swift; sourceTree = "<group>"; };
+		92EE7A032433352900B01D52 /* ACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACollectionViewCell.swift; sourceTree = "<group>"; };
+		92EE7A052433354D00B01D52 /* ACollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACollectionViewCellModel.swift; sourceTree = "<group>"; };
 		DA3675C6E86BC62D45E05390 /* Pods-CollectionModel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionModel_Tests.release.xcconfig"; path = "Target Support Files/Pods-CollectionModel_Tests/Pods-CollectionModel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +222,7 @@
 				92EE79FF24332FCB00B01D52 /* TableViewContent.swift */,
 				927B9F1E240978E300AA4FD1 /* Layout */,
 				927B9F1924096DB500AA4FD1 /* TableView */,
+				92EE7A012433351000B01D52 /* CollectionView */,
 				92530997242E1168001875B3 /* EmptyInit.swift */,
 			);
 			name = Shared;
@@ -289,6 +294,23 @@
 				92943340240584030057D6CD /* MainViewControllerDataSource.swift */,
 			);
 			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		92EE7A012433351000B01D52 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				92EE7A022433351D00B01D52 /* Cells */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		92EE7A022433351D00B01D52 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				92EE7A032433352900B01D52 /* ACollectionViewCell.swift */,
+				92EE7A052433354D00B01D52 /* ACollectionViewCellModel.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		9DE098BB8E7F019FB6080376 /* Pods */ = {
@@ -494,7 +516,9 @@
 				9281A9B82417B23700F732AA /* MultipleHeaderFooterTypesTableViewDataSource.swift in Sources */,
 				92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */,
 				927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */,
+				92EE7A062433354D00B01D52 /* ACollectionViewCellModel.swift in Sources */,
 				9281A9C02417C62300F732AA /* BTableViewHeaderFooterView.swift in Sources */,
+				92EE7A042433352900B01D52 /* ACollectionViewCell.swift in Sources */,
 				92EE79FE24332EE300B01D52 /* RegisterableView.swift in Sources */,
 				9281A9B22417ABA300F732AA /* BTableViewCell.swift in Sources */,
 				9281A9B62417ACE500F732AA /* MultipleCellTypesTableViewDataSource.swift in Sources */,
@@ -638,6 +662,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KRW89C3W5M;
 				INFOPLIST_FILE = CollectionModel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -655,6 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KRW89C3W5M;
 				INFOPLIST_FILE = CollectionModel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

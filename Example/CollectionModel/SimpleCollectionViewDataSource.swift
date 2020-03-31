@@ -17,7 +17,7 @@ class SimpleCollectionViewDataSource: NSObject,
     EmptyInit,
     CollectionViewContent {
 
-    typealias ViewModel = CollectionViewModel<Never, String>
+    typealias ViewModel = CollectionViewModel<Never, ACollectionViewCellModel>
 
     var viewModel = ViewModel(
         cells: [
@@ -36,7 +36,7 @@ class SimpleCollectionViewDataSource: NSObject,
     }
 
     func register(in collectionView: UICollectionView) {
-        collectionView.register(cell: .class(UICollectionViewCell.self))
+        collectionView.register(cell: .class(ACollectionViewCell.self))
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -53,11 +53,8 @@ class SimpleCollectionViewDataSource: NSObject,
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueCell(at: indexPath)
-        let label = UILabel()
-        cell.contentView.addSubview(label)
-        label.pinToSuperview()
-        label.text = viewModel.cellViewModel(at: indexPath)
+        let cell: ACollectionViewCell = collectionView.dequeueCell(at: indexPath)
+        cell.configure(with: viewModel.cellViewModel(at: indexPath))
         return cell
     }
 

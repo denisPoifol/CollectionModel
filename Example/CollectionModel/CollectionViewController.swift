@@ -24,5 +24,7 @@ class CollectionViewController<DataSource: EmptyInitCollectionViewDataSource>: U
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
+        collectionView.contentInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
     }
 }
