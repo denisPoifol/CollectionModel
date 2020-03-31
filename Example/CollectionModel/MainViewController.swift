@@ -43,7 +43,7 @@ class MainViewController: UIViewController,
         case .simpleCollectionViewCell:
             viewController = CollectionViewController<SimpleCollectionViewDataSource>()
         case .multipleCollectionViewCells:
-            viewController = UIViewController()
+            viewController = CollectionViewController<MultipleCellTypesCollectionViewDataSource>()
         case .multipleSupplementaryViews:
             viewController = UIViewController()
         }

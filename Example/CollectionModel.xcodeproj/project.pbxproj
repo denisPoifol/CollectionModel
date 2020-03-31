@@ -31,6 +31,9 @@
 		9281A9BC2417C58D00F732AA /* ATableViewHeaderFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9BB2417C58D00F732AA /* ATableViewHeaderFooterViewModel.swift */; };
 		9281A9BE2417C61A00F732AA /* BTableViewHeaderFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9BD2417C61A00F732AA /* BTableViewHeaderFooterViewModel.swift */; };
 		9281A9C02417C62300F732AA /* BTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9BF2417C62300F732AA /* BTableViewHeaderFooterView.swift */; };
+		92938401243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92938400243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift */; };
+		929384032433389400F138C7 /* BCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929384022433389400F138C7 /* BCollectionViewCell.swift */; };
+		92938405243338B400F138C7 /* BCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92938404243338B400F138C7 /* BCollectionViewCellModel.swift */; };
 		92943341240584030057D6CD /* MainViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92943340240584030057D6CD /* MainViewControllerDataSource.swift */; };
 		92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */; };
 		92EE79FE24332EE300B01D52 /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FD24332EE300B01D52 /* RegisterableView.swift */; };
@@ -86,6 +89,9 @@
 		9281A9BB2417C58D00F732AA /* ATableViewHeaderFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATableViewHeaderFooterViewModel.swift; sourceTree = "<group>"; };
 		9281A9BD2417C61A00F732AA /* BTableViewHeaderFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTableViewHeaderFooterViewModel.swift; sourceTree = "<group>"; };
 		9281A9BF2417C62300F732AA /* BTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		92938400243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCellTypesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		929384022433389400F138C7 /* BCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCollectionViewCell.swift; sourceTree = "<group>"; };
+		92938404243338B400F138C7 /* BCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCollectionViewCellModel.swift; sourceTree = "<group>"; };
 		92943340240584030057D6CD /* MainViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerDataSource.swift; sourceTree = "<group>"; };
 		92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewContent.swift; sourceTree = "<group>"; };
 		92EE79FD24332EE300B01D52 /* RegisterableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
@@ -209,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */,
+				92938400243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -309,6 +316,8 @@
 			children = (
 				92EE7A032433352900B01D52 /* ACollectionViewCell.swift */,
 				92EE7A052433354D00B01D52 /* ACollectionViewCellModel.swift */,
+				929384022433389400F138C7 /* BCollectionViewCell.swift */,
+				92938404243338B400F138C7 /* BCollectionViewCellModel.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -502,9 +511,11 @@
 				9281A9AF2417A93700F732AA /* ATableViewCell.swift in Sources */,
 				9281A9B42417ABE200F732AA /* BTableViewCellModel.swift in Sources */,
 				9281A9A92417A72700F732AA /* TableViewController.swift in Sources */,
+				92938401243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift in Sources */,
 				9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				92EE7A0024332FCB00B01D52 /* TableViewContent.swift in Sources */,
+				929384032433389400F138C7 /* BCollectionViewCell.swift in Sources */,
 				927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */,
 				9281A9BA2417B2BE00F732AA /* ATableViewHeaderFooterView.swift in Sources */,
 				9281A9BC2417C58D00F732AA /* ATableViewHeaderFooterViewModel.swift in Sources */,
@@ -516,6 +527,7 @@
 				9281A9B82417B23700F732AA /* MultipleHeaderFooterTypesTableViewDataSource.swift in Sources */,
 				92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */,
 				927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */,
+				92938405243338B400F138C7 /* BCollectionViewCellModel.swift in Sources */,
 				92EE7A062433354D00B01D52 /* ACollectionViewCellModel.swift in Sources */,
 				9281A9C02417C62300F732AA /* BTableViewHeaderFooterView.swift in Sources */,
 				92EE7A042433352900B01D52 /* ACollectionViewCell.swift in Sources */,
