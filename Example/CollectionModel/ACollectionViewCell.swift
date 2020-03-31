@@ -35,7 +35,7 @@ class ACollectionViewCell: UICollectionViewCell {
         ]
         subviews.forEach(contentView.addSubview)
         subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-        titleLabel.pinToSuperview(insets: UIEdgeInsets(horizontal: 32, vertical: 12))
+        titleLabel.pinToSuperview(insets: UIEdgeInsets(horizontal: 16, vertical: 12))
         layer.borderWidth = 1
     }
 }

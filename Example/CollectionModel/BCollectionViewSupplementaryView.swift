@@ -1,5 +1,5 @@
 //
-//  BCollectionViewCell.swift
+//  BCollectionViewSupplementaryView.swift
 //  CollectionModel_Example
 //
 //  Created by Denis Poifol on 31/03/2020.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BCollectionViewCell: UICollectionViewCell {
+class BCollectionViewSupplementaryView: UICollectionReusableView {
 
     private let titleLabel = UILabel()
 
@@ -23,10 +23,9 @@ class BCollectionViewCell: UICollectionViewCell {
         setUp()
     }
 
-    func configure(with viewModel: BCollectionViewCellModel) {
+    func configure(with viewModel: BCollectionViewSupplementaryViewModel) {
         titleLabel.text = viewModel.title
-        titleLabel.textColor = viewModel.textColor
-        layer.borderColor = viewModel.textColor.cgColor
+        backgroundColor = viewModel.backgroundColor
     }
 
     // MARK: - Private
@@ -35,9 +34,10 @@ class BCollectionViewCell: UICollectionViewCell {
         let subviews: [UIView] = [
             titleLabel
         ]
-        subviews.forEach(contentView.addSubview)
+        subviews.forEach(addSubview)
         subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-        titleLabel.pinToSuperview(insets: UIEdgeInsets(horizontal: 16, vertical: 12))
+        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        titleLabel.pinToSuperview(edges: [.left, .right], insets: UIEdgeInsets(horizontal: 32, vertical: 12))
         layer.borderWidth = 1
     }
 }

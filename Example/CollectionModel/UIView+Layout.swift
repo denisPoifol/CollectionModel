@@ -22,7 +22,7 @@ extension UIView {
             edges.contains(.left) ? pinTo(view: superview, attribute: .left, constant: insets.left, priority: priority) : nil,
             edges.contains(.bottom) ? pinTo(view: superview, attribute: .bottom, constant: -insets.bottom, priority: priority) : nil,
             edges.contains(.right) ? pinTo(view: superview, attribute: .right, constant: -insets.right, priority: priority) : nil,
-            ].compactMap { $0 }
+        ].compactMap { $0 }
         return constraints
     }
 

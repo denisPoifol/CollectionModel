@@ -62,4 +62,3 @@ class SimpleCollectionViewDataSource: NSObject,
         // Do someting
     }
 }
-

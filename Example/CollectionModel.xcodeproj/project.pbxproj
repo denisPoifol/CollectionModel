@@ -34,6 +34,11 @@
 		92938401243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92938400243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift */; };
 		929384032433389400F138C7 /* BCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929384022433389400F138C7 /* BCollectionViewCell.swift */; };
 		92938405243338B400F138C7 /* BCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92938404243338B400F138C7 /* BCollectionViewCellModel.swift */; };
+		92938407243339B600F138C7 /* MultipleSuplementaryViewTypesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92938406243339B600F138C7 /* MultipleSuplementaryViewTypesCollectionViewDataSource.swift */; };
+		9293840A24333A3100F138C7 /* ACollectionViewSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293840924333A3100F138C7 /* ACollectionViewSupplementaryView.swift */; };
+		9293840C24333BDF00F138C7 /* ACollectionViewSupplementaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293840B24333BDF00F138C7 /* ACollectionViewSupplementaryViewModel.swift */; };
+		9293840E243340B400F138C7 /* BCollectionViewSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293840D243340B400F138C7 /* BCollectionViewSupplementaryView.swift */; };
+		92938410243340C000F138C7 /* BCollectionViewSupplementaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293840F243340C000F138C7 /* BCollectionViewSupplementaryViewModel.swift */; };
 		92943341240584030057D6CD /* MainViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92943340240584030057D6CD /* MainViewControllerDataSource.swift */; };
 		92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */; };
 		92EE79FE24332EE300B01D52 /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE79FD24332EE300B01D52 /* RegisterableView.swift */; };
@@ -92,6 +97,11 @@
 		92938400243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCellTypesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		929384022433389400F138C7 /* BCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCollectionViewCell.swift; sourceTree = "<group>"; };
 		92938404243338B400F138C7 /* BCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCollectionViewCellModel.swift; sourceTree = "<group>"; };
+		92938406243339B600F138C7 /* MultipleSuplementaryViewTypesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSuplementaryViewTypesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		9293840924333A3100F138C7 /* ACollectionViewSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACollectionViewSupplementaryView.swift; sourceTree = "<group>"; };
+		9293840B24333BDF00F138C7 /* ACollectionViewSupplementaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACollectionViewSupplementaryViewModel.swift; sourceTree = "<group>"; };
+		9293840D243340B400F138C7 /* BCollectionViewSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCollectionViewSupplementaryView.swift; sourceTree = "<group>"; };
+		9293840F243340C000F138C7 /* BCollectionViewSupplementaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCollectionViewSupplementaryViewModel.swift; sourceTree = "<group>"; };
 		92943340240584030057D6CD /* MainViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerDataSource.swift; sourceTree = "<group>"; };
 		92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewContent.swift; sourceTree = "<group>"; };
 		92EE79FD24332EE300B01D52 /* RegisterableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
@@ -216,6 +226,7 @@
 			children = (
 				9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */,
 				92938400243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift */,
+				92938406243339B600F138C7 /* MultipleSuplementaryViewTypesCollectionViewDataSource.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -294,6 +305,17 @@
 			name = DataSource;
 			sourceTree = "<group>";
 		};
+		9293840824333A0000F138C7 /* SupplementaryView */ = {
+			isa = PBXGroup;
+			children = (
+				9293840924333A3100F138C7 /* ACollectionViewSupplementaryView.swift */,
+				9293840B24333BDF00F138C7 /* ACollectionViewSupplementaryViewModel.swift */,
+				9293840D243340B400F138C7 /* BCollectionViewSupplementaryView.swift */,
+				9293840F243340C000F138C7 /* BCollectionViewSupplementaryViewModel.swift */,
+			);
+			name = SupplementaryView;
+			sourceTree = "<group>";
+		};
 		9294333E2405835F0057D6CD /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +328,7 @@
 		92EE7A012433351000B01D52 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				9293840824333A0000F138C7 /* SupplementaryView */,
 				92EE7A022433351D00B01D52 /* Cells */,
 			);
 			name = CollectionView;
@@ -507,9 +530,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9253099B242E11F6001875B3 /* SimpleCollectionViewDataSource.swift in Sources */,
+				9293840E243340B400F138C7 /* BCollectionViewSupplementaryView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				9281A9AF2417A93700F732AA /* ATableViewCell.swift in Sources */,
 				9281A9B42417ABE200F732AA /* BTableViewCellModel.swift in Sources */,
+				92938407243339B600F138C7 /* MultipleSuplementaryViewTypesCollectionViewDataSource.swift in Sources */,
 				9281A9A92417A72700F732AA /* TableViewController.swift in Sources */,
 				92938401243337A600F138C7 /* MultipleCellTypesCollectionViewDataSource.swift in Sources */,
 				9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */,
@@ -518,6 +543,7 @@
 				929384032433389400F138C7 /* BCollectionViewCell.swift in Sources */,
 				927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */,
 				9281A9BA2417B2BE00F732AA /* ATableViewHeaderFooterView.swift in Sources */,
+				92938410243340C000F138C7 /* BCollectionViewSupplementaryViewModel.swift in Sources */,
 				9281A9BC2417C58D00F732AA /* ATableViewHeaderFooterViewModel.swift in Sources */,
 				9281A9A62417A2EF00F732AA /* SmoothDeselection.swift in Sources */,
 				9281A9BE2417C61A00F732AA /* BTableViewHeaderFooterViewModel.swift in Sources */,
@@ -531,7 +557,9 @@
 				92EE7A062433354D00B01D52 /* ACollectionViewCellModel.swift in Sources */,
 				9281A9C02417C62300F732AA /* BTableViewHeaderFooterView.swift in Sources */,
 				92EE7A042433352900B01D52 /* ACollectionViewCell.swift in Sources */,
+				9293840A24333A3100F138C7 /* ACollectionViewSupplementaryView.swift in Sources */,
 				92EE79FE24332EE300B01D52 /* RegisterableView.swift in Sources */,
+				9293840C24333BDF00F138C7 /* ACollectionViewSupplementaryViewModel.swift in Sources */,
 				9281A9B22417ABA300F732AA /* BTableViewCell.swift in Sources */,
 				9281A9B62417ACE500F732AA /* MultipleCellTypesTableViewDataSource.swift in Sources */,
 				9281A9B02417A93700F732AA /* ATableViewCellModel.swift in Sources */,

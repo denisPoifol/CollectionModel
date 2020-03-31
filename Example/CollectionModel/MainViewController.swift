@@ -45,9 +45,8 @@ class MainViewController: UIViewController,
         case .multipleCollectionViewCells:
             viewController = CollectionViewController<MultipleCellTypesCollectionViewDataSource>()
         case .multipleSupplementaryViews:
-            viewController = UIViewController()
+            viewController = CollectionViewController<MultipleSuplementaryViewCollectionViewDataSource>()
         }
         navigationController?.pushViewController(viewController, animated: true)
-        // TODO: (Denis Poifol) 10/03/2020 ChangeViewController according to selected cell
     }
 }

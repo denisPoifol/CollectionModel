@@ -75,5 +75,3 @@ class MultipleCellTypesCollectionViewDataSource: NSObject,
         // Do someting
     }
 }
-
-
