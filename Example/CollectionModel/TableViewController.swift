@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-protocol EmptyInit {
-    init()
-}
-
 typealias EmptyInitTableViewDataSource = UITableViewDataSource & UITableViewDelegate & EmptyInit
 
 class TableViewController<DataSource: EmptyInitTableViewDataSource>: UIViewController {

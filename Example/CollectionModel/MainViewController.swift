@@ -41,7 +41,7 @@ class MainViewController: UIViewController,
         case .multipleHeaderFooterTypes:
             viewController = TableViewController<MultipleHeaderFooterTypesTableViewDataSource>()
         case .simpleCollectionViewCell:
-            viewController = UIViewController()
+            viewController = CollectionViewController<SimpleCollectionViewDataSource>()
         case .multipleCollectionViewCells:
             viewController = UIViewController()
         case .multipleSupplementaryViews:
