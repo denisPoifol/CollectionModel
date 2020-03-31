@@ -63,3 +63,6 @@ Gemfile_fastlane.lock
 
 ##AppCode
 .idea/
+
+##Rbenv
+.ruby-version
