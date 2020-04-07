@@ -55,6 +55,28 @@ class AnimatedTableViewDataSource: NSObject,
         return cell
     }
 
+    func tableView(_ tableView: UITableView,
+                   titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        String("Delete")
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return viewModel[indexPath].action != .addCell
+    }
+
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCellEditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if case .delete = editingStyle {
+            var updatedViewModel = viewModel
+            updatedViewModel.sections[indexPath.section].cells.remove(at: indexPath.row)
+            let changeSet = StagedChangeset<ViewModel>(source: viewModel, target: updatedViewModel)
+            tableView.reload(using: changeSet, with: .automatic) { viewModel in
+                self.viewModel = viewModel
+            }
+        }
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let action = viewModel[indexPath].action
         switch action {
