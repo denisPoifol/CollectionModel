@@ -18,7 +18,6 @@
 		9253099B242E11F6001875B3 /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */; };
 		927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B9F1F240978F100AA4FD1 /* UIView+Layout.swift */; };
 		927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B9F2124097C2500AA4FD1 /* UIEdgeInsets.swift */; };
-		927DC4E0243C9898004A3673 /* AnimatedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4DF243C9898004A3673 /* AnimatedTableViewController.swift */; };
 		927DC4E2243C994F004A3673 /* AnimatedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */; };
 		927DC4E4243C99AF004A3673 /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */; };
 		927DC4E6243C9A58004A3673 /* AnimatableTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */; };
@@ -84,7 +83,6 @@
 		9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		927B9F1F240978F100AA4FD1 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		927B9F2124097C2500AA4FD1 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
-		927DC4DF243C9898004A3673 /* AnimatedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTableViewController.swift; sourceTree = "<group>"; };
 		927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTableViewDataSource.swift; sourceTree = "<group>"; };
 		927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCell.swift; sourceTree = "<group>"; };
 		927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCellModel.swift; sourceTree = "<group>"; };
@@ -306,7 +304,6 @@
 		927DC4DE243C97DC004A3673 /* CollectionModelAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				927DC4DF243C9898004A3673 /* AnimatedTableViewController.swift */,
 				927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */,
 				927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */,
 				927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */,
@@ -575,7 +572,6 @@
 				92EE7A0024332FCB00B01D52 /* TableViewContent.swift in Sources */,
 				929384032433389400F138C7 /* BCollectionViewCell.swift in Sources */,
 				927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */,
-				927DC4E0243C9898004A3673 /* AnimatedTableViewController.swift in Sources */,
 				9281A9BA2417B2BE00F732AA /* ATableViewHeaderFooterView.swift in Sources */,
 				927DC4E6243C9A58004A3673 /* AnimatableTableViewCellModel.swift in Sources */,
 				927DC4E2243C994F004A3673 /* AnimatedTableViewDataSource.swift in Sources */,
