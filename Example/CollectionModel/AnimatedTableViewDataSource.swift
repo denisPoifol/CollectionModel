@@ -8,7 +8,10 @@
 
 import Foundation
 import UIKit
+import DifferenceKit
 import CollectionModelCore
+import CollectionModelAnimation
+
 // MARK: - SimpleTableViewDataSource
 class AnimatedTableViewDataSource: NSObject,
     UITableViewDataSource,
@@ -20,8 +23,8 @@ class AnimatedTableViewDataSource: NSObject,
 
     var viewModel = ViewModel(
         cells: [
-            AnimatableTableViewCellModel(title: "Add cell", action: .addCell),
-            AnimatableTableViewCellModel(title: "Shuffle cells", action: .shuffleCells),
+            AnimatableTableViewCellModel(id: UUID(), title: "Add cell", action: .addCell),
+            AnimatableTableViewCellModel(id: UUID(), title: "Shuffle cells", action: .shuffleCells),
         ]
     )
 
@@ -56,13 +59,16 @@ class AnimatedTableViewDataSource: NSObject,
         let action = viewModel[indexPath].action
         switch action {
         case .addCell:
-            viewModel.sections[0].append(AnimatableTableViewCellModel(title: "Shuffle cells", action: .shuffleCells))
+            viewModel.sections[0]
+                .append(AnimatableTableViewCellModel(id: UUID(), title: "Shuffle cells", action: .shuffleCells))
             tableView.reloadData()
         case .shuffleCells:
-            // TODO: (Denis Poifol) 07/04/2020 Conforming to a specific protocol
-            // could enable us to call shuffle on a section ?
-            viewModel.sections[0].cells = viewModel.sections[0].shuffled()
-            tableView.reloadData()
+            var shuffled = viewModel
+            shuffled.sections[0].cells = shuffled.sections[0].shuffled()
+            let changeSet = StagedChangeset<ViewModel>(source: viewModel, target: shuffled)
+            tableView.reload(using: changeSet, with: .automatic) { viewModel in
+                self.viewModel = viewModel
+            }
         }
     }
 }

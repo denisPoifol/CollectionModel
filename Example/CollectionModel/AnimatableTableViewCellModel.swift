@@ -7,8 +7,14 @@
 //
 
 import Foundation
+import DifferenceKit
 
-struct AnimatableTableViewCellModel {
+struct AnimatableTableViewCellModel: Hashable, Differentiable {
+    typealias DifferenceIdentifier = UUID
+
+    var differenceIdentifier: UUID { id }
+
+    let id: UUID
     let title: String
     let action: Action
 
