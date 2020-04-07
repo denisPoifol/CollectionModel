@@ -87,7 +87,7 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
     }
 }
 
-extension CollectionViewModel: Collection {
+extension CollectionViewModel: RandomAccessCollection {
     public typealias Index = Int
     public typealias Element = CollectionViewSectionViewModel<SupplementaryViewModel, CellViewModel>
 

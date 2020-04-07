@@ -44,7 +44,7 @@ public struct TableViewSectionViewModel<HeaderFooterViewModel, CellViewModel> {
     }
 }
 
-extension TableViewSectionViewModel: Collection {
+extension TableViewSectionViewModel: RandomAccessCollection {
     public typealias Index = Int
     public typealias Element = CellViewModel
 
