@@ -11,12 +11,16 @@ import CollectionModelCore
 
 // MARK: - ViewModel for the main viewController cells
 enum MainSectionCellViewModel {
+    // MARK: - TableView
     case simpleTableViewCell
     case multipleTableViewCells
     case multipleHeaderFooterTypes
+    // MARK: - CollectionView
     case simpleCollectionViewCell
     case multipleCollectionViewCells
     case multipleSupplementaryViews
+    // MARK: - Animating TableView
+    case animateTableViewCells
 
     var title: String {
         switch self {
@@ -32,6 +36,8 @@ enum MainSectionCellViewModel {
             return "Multiple cell type"
         case .multipleSupplementaryViews:
             return "Multiple supplementaryView type"
+        case .animateTableViewCells:
+            return "Animate tableView changes"
         }
     }
 }
@@ -66,6 +72,12 @@ class MainViewControllerDataSource: NSObject,
                     .simpleCollectionViewCell,
                     .multipleCollectionViewCells,
                     .multipleSupplementaryViews,
+                ]
+            ),
+            ViewModel.Section(
+                header: "Animations",
+                cells: [
+                    .animateTableViewCells
                 ]
             )
         ]
