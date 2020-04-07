@@ -467,11 +467,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CollectionModel_Example/Pods-CollectionModel_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CollectionModel/CollectionModel.framework",
+				"${BUILT_PRODUCTS_DIR}/CollectionModelCore/CollectionModelCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionModelCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

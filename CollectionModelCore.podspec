@@ -1,7 +1,7 @@
 
 
 Pod::Spec.new do |s|
-  s.name             = 'CollectionModel'
+  s.name             = 'CollectionModelCore'
   s.version          = '0.0.1'
   s.summary          = 'ViewModels for collectionViews and tableViews.'
   s.description      = <<-DESC
@@ -11,14 +11,13 @@ CollectionModel provide two struct to represente viewModels for collectionViews 
   s.homepage         = 'https://github.com/denisPoifol/CollectionModel'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Denis Poifol' => 'denis.poifol@gmail.com' }
-  s.source           = { :git => 'https://github.com/denisPoifol/CollectionModel.git', :tag => s.version.to_s }
+  s.source           = { 
+    :git => 'https://github.com/denisPoifol/CollectionModel.git',
+    :tag => 'Core-' + s.version.to_s 
+  }
   s.social_media_url = 'https://twitter.com/DenisPoifol'
 
   s.swift_versions = ['5.0', '5.1']
   s.ios.deployment_target = '8.0'
-  s.default_subspec = 'Core'
-
-  s.subspec 'Core' do |ss|
-    ss.ios.dependency 'CollectionModelCore', '0.0.1'
-  end
+  s.source_files = 'Core/Sources/*'
 end

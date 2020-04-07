@@ -8,8 +8,7 @@
 
 import Foundation
 import UIKit
-import CollectionModel
-
+import CollectionModelCore
 // MARK: - SimpleTableViewDataSource
 class SimpleTableViewDataSource: NSObject,
     UITableViewDataSource,
