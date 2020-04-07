@@ -59,9 +59,13 @@ class AnimatedTableViewDataSource: NSObject,
         let action = viewModel[indexPath].action
         switch action {
         case .addCell:
-            viewModel.sections[0]
+            var extendedViewModel = viewModel
+            extendedViewModel.sections[0]
                 .append(AnimatableTableViewCellModel(id: UUID(), title: "Shuffle cells", action: .shuffleCells))
-            tableView.reloadData()
+            let changeSet = StagedChangeset<ViewModel>(source: viewModel, target: extendedViewModel)
+            tableView.reload(using: changeSet, with: .automatic) { viewModel in
+                self.viewModel = viewModel
+            }
         case .shuffleCells:
             var shuffled = viewModel
             shuffled.sections[0].cells = shuffled.sections[0].shuffled()
