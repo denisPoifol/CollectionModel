@@ -21,6 +21,7 @@
 		927DC4E2243C994F004A3673 /* AnimatedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */; };
 		927DC4E4243C99AF004A3673 /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */; };
 		927DC4E6243C9A58004A3673 /* AnimatableTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */; };
+		927DC4EC243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */; };
 		9281A9A62417A2EF00F732AA /* SmoothDeselection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9A52417A2EF00F732AA /* SmoothDeselection.swift */; };
 		9281A9A92417A72700F732AA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9A82417A72700F732AA /* TableViewController.swift */; };
 		9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */; };
@@ -86,6 +87,7 @@
 		927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTableViewDataSource.swift; sourceTree = "<group>"; };
 		927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCell.swift; sourceTree = "<group>"; };
 		927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCellModel.swift; sourceTree = "<group>"; };
+		927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		9281A9A52417A2EF00F732AA /* SmoothDeselection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothDeselection.swift; sourceTree = "<group>"; };
 		9281A9A82417A72700F732AA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -304,11 +306,28 @@
 		927DC4DE243C97DC004A3673 /* CollectionModelAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				927DC4EA243CBD1D004A3673 /* CollectionView */,
+				927DC4E9243CBD11004A3673 /* TableView */,
+			);
+			name = CollectionModelAnimation;
+			sourceTree = "<group>";
+		};
+		927DC4E9243CBD11004A3673 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
 				927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */,
 				927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */,
 				927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */,
 			);
-			name = CollectionModelAnimation;
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		927DC4EA243CBD1D004A3673 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */,
+			);
+			name = CollectionView;
 			sourceTree = "<group>";
 		};
 		9281A9A72417A71500F732AA /* TableViewController */ = {
@@ -583,6 +602,7 @@
 				92530998242E1168001875B3 /* EmptyInit.swift in Sources */,
 				92530996242E1148001875B3 /* CollectionViewController.swift in Sources */,
 				9281A9B82417B23700F732AA /* MultipleHeaderFooterTypesTableViewDataSource.swift in Sources */,
+				927DC4EC243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift in Sources */,
 				92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */,
 				927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */,
 				92938405243338B400F138C7 /* BCollectionViewCellModel.swift in Sources */,

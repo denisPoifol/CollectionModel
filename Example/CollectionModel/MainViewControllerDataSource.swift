@@ -20,7 +20,8 @@ enum MainSectionCellViewModel {
     case multipleCollectionViewCells
     case multipleSupplementaryViews
     // MARK: - Animating TableView
-    case animateTableViewCells
+    case animatedTableViewCells
+    case animatedCollectionViewCells
 
     var title: String {
         switch self {
@@ -36,8 +37,10 @@ enum MainSectionCellViewModel {
             return "Multiple cell type"
         case .multipleSupplementaryViews:
             return "Multiple supplementaryView type"
-        case .animateTableViewCells:
+        case .animatedTableViewCells:
             return "Animate tableView changes"
+        case .animatedCollectionViewCells:
+            return "Animate collectionView changes"
         }
     }
 }
@@ -77,7 +80,8 @@ class MainViewControllerDataSource: NSObject,
             ViewModel.Section(
                 header: "Animations",
                 cells: [
-                    .animateTableViewCells
+                    .animatedTableViewCells,
+                    .animatedCollectionViewCells,
                 ]
             )
         ]
