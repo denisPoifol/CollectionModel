@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import CollectionModel
+import CollectionModelCore
 
 // MARK: - SimpleCollectionViewDataSource
 class SimpleCollectionViewDataSource: NSObject,

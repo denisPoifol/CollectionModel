@@ -1,5 +1,5 @@
 import XCTest
-import CollectionModel
+import CollectionModelCore
 
 class Tests: XCTestCase {
     

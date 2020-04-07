@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CollectionModel
+import CollectionModelCore
 
 // MARK: - ViewModel for the main viewController cells
 enum MainSectionCellViewModel {

@@ -1,16 +1,16 @@
 PODS:
-  - CollectionModel (0.0.1)
+  - CollectionModelCore (0.0.1)
 
 DEPENDENCIES:
-  - CollectionModel (from `../`)
+  - CollectionModelCore (from `../`)
 
 EXTERNAL SOURCES:
-  CollectionModel:
+  CollectionModelCore:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CollectionModel: 4c6c2455f549e472b14aded97dedc270a0fefb24
+  CollectionModelCore: 99f1f509be907ed7aa13dc651409c4d81ba2e828
 
-PODFILE CHECKSUM: 6453c768bb676c83a006eee68becdaf0df02ab6f
+PODFILE CHECKSUM: ac00d520c25dda25dea9f6676d76ca1fce6437d4
 
 COCOAPODS: 1.8.4
