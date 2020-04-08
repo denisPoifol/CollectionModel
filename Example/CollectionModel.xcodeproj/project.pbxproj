@@ -18,6 +18,12 @@
 		9253099B242E11F6001875B3 /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */; };
 		927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B9F1F240978F100AA4FD1 /* UIView+Layout.swift */; };
 		927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B9F2124097C2500AA4FD1 /* UIEdgeInsets.swift */; };
+		927DC4E2243C994F004A3673 /* AnimatedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */; };
+		927DC4E4243C99AF004A3673 /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */; };
+		927DC4E6243C9A58004A3673 /* AnimatableTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */; };
+		927DC4EC243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */; };
+		927DC4EE243DF1BB004A3673 /* AnimatableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4ED243DF1BB004A3673 /* AnimatableCollectionViewCell.swift */; };
+		927DC4F0243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4EF243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift */; };
 		9281A9A62417A2EF00F732AA /* SmoothDeselection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9A52417A2EF00F732AA /* SmoothDeselection.swift */; };
 		9281A9A92417A72700F732AA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9A82417A72700F732AA /* TableViewController.swift */; };
 		9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */; };
@@ -80,6 +86,12 @@
 		9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		927B9F1F240978F100AA4FD1 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		927B9F2124097C2500AA4FD1 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
+		927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTableViewDataSource.swift; sourceTree = "<group>"; };
+		927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCell.swift; sourceTree = "<group>"; };
+		927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCellModel.swift; sourceTree = "<group>"; };
+		927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		927DC4ED243DF1BB004A3673 /* AnimatableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableCollectionViewCell.swift; sourceTree = "<group>"; };
+		927DC4EF243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableCollectionViewCellModel.swift; sourceTree = "<group>"; };
 		9281A9A52417A2EF00F732AA /* SmoothDeselection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothDeselection.swift; sourceTree = "<group>"; };
 		9281A9A82417A72700F732AA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -167,8 +179,8 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				927B9F1824096DB100AA4FD1 /* Shared */,
 				9294333E2405835F0057D6CD /* MainViewController */,
-				9281A9A72417A71500F732AA /* TableViewController */,
-				92530994242E1129001875B3 /* CollectionViewController */,
+				927DC4DD243C84FA004A3673 /* CollectionModelCore */,
+				927DC4DE243C97DC004A3673 /* CollectionModelAnimation */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -239,8 +251,6 @@
 				92EE79FB24332D6F00B01D52 /* CollectionViewContent.swift */,
 				92EE79FF24332FCB00B01D52 /* TableViewContent.swift */,
 				927B9F1E240978E300AA4FD1 /* Layout */,
-				927B9F1924096DB500AA4FD1 /* TableView */,
-				92EE7A012433351000B01D52 /* CollectionView */,
 				92530997242E1168001875B3 /* EmptyInit.swift */,
 			);
 			name = Shared;
@@ -284,6 +294,46 @@
 				927B9F2124097C2500AA4FD1 /* UIEdgeInsets.swift */,
 			);
 			name = Layout;
+			sourceTree = "<group>";
+		};
+		927DC4DD243C84FA004A3673 /* CollectionModelCore */ = {
+			isa = PBXGroup;
+			children = (
+				927B9F1924096DB500AA4FD1 /* TableView */,
+				92EE7A012433351000B01D52 /* CollectionView */,
+				9281A9A72417A71500F732AA /* TableViewController */,
+				92530994242E1129001875B3 /* CollectionViewController */,
+			);
+			name = CollectionModelCore;
+			sourceTree = "<group>";
+		};
+		927DC4DE243C97DC004A3673 /* CollectionModelAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				927DC4EA243CBD1D004A3673 /* CollectionView */,
+				927DC4E9243CBD11004A3673 /* TableView */,
+			);
+			name = CollectionModelAnimation;
+			sourceTree = "<group>";
+		};
+		927DC4E9243CBD11004A3673 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */,
+				927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */,
+				927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		927DC4EA243CBD1D004A3673 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */,
+				927DC4ED243DF1BB004A3673 /* AnimatableCollectionViewCell.swift */,
+				927DC4EF243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift */,
+			);
+			name = CollectionView;
 			sourceTree = "<group>";
 		};
 		9281A9A72417A71500F732AA /* TableViewController */ = {
@@ -467,11 +517,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CollectionModel_Example/Pods-CollectionModel_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CollectionModelAnimation/CollectionModelAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/CollectionModelCore/CollectionModelCore.framework",
+				"${BUILT_PRODUCTS_DIR}/DifferenceKit/DifferenceKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionModelAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionModelCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DifferenceKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -530,6 +584,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9253099B242E11F6001875B3 /* SimpleCollectionViewDataSource.swift in Sources */,
+				927DC4E4243C99AF004A3673 /* AnimatableTableViewCell.swift in Sources */,
+				927DC4EE243DF1BB004A3673 /* AnimatableCollectionViewCell.swift in Sources */,
 				9293840E243340B400F138C7 /* BCollectionViewSupplementaryView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				9281A9AF2417A93700F732AA /* ATableViewCell.swift in Sources */,
@@ -543,6 +599,9 @@
 				929384032433389400F138C7 /* BCollectionViewCell.swift in Sources */,
 				927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */,
 				9281A9BA2417B2BE00F732AA /* ATableViewHeaderFooterView.swift in Sources */,
+				927DC4F0243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift in Sources */,
+				927DC4E6243C9A58004A3673 /* AnimatableTableViewCellModel.swift in Sources */,
+				927DC4E2243C994F004A3673 /* AnimatedTableViewDataSource.swift in Sources */,
 				92938410243340C000F138C7 /* BCollectionViewSupplementaryViewModel.swift in Sources */,
 				9281A9BC2417C58D00F732AA /* ATableViewHeaderFooterViewModel.swift in Sources */,
 				9281A9A62417A2EF00F732AA /* SmoothDeselection.swift in Sources */,
@@ -551,6 +610,7 @@
 				92530998242E1168001875B3 /* EmptyInit.swift in Sources */,
 				92530996242E1148001875B3 /* CollectionViewController.swift in Sources */,
 				9281A9B82417B23700F732AA /* MultipleHeaderFooterTypesTableViewDataSource.swift in Sources */,
+				927DC4EC243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift in Sources */,
 				92EE79FC24332D6F00B01D52 /* CollectionViewContent.swift in Sources */,
 				927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */,
 				92938405243338B400F138C7 /* BCollectionViewCellModel.swift in Sources */,

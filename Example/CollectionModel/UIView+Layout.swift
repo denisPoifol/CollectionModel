@@ -45,3 +45,7 @@ extension UIView {
         return constraint
     }
 }
+
+extension UILayoutPriority {
+    static var applyIfPossible = UILayoutPriority(rawValue: UILayoutPriority.required.rawValue - 1)
+}

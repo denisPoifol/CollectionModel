@@ -1,16 +1,34 @@
 PODS:
+  - CollectionModelAnimation (0.0.1):
+    - CollectionModelCore (= 0.0.1)
+    - DifferenceKit (= 1.1.5)
   - CollectionModelCore (0.0.1)
+  - DifferenceKit (1.1.5):
+    - DifferenceKit/Core (= 1.1.5)
+    - DifferenceKit/UIKitExtension (= 1.1.5)
+  - DifferenceKit/Core (1.1.5)
+  - DifferenceKit/UIKitExtension (1.1.5):
+    - DifferenceKit/Core
 
 DEPENDENCIES:
+  - CollectionModelAnimation (from `../`)
   - CollectionModelCore (from `../`)
 
+SPEC REPOS:
+  trunk:
+    - DifferenceKit
+
 EXTERNAL SOURCES:
+  CollectionModelAnimation:
+    :path: "../"
   CollectionModelCore:
     :path: "../"
 
 SPEC CHECKSUMS:
+  CollectionModelAnimation: 3c49d173a7ba7dbc27c194ba14411cbe43516b0a
   CollectionModelCore: 5a1a01dbfd89814434b205affbe3622a83456f27
+  DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
 
-PODFILE CHECKSUM: ac00d520c25dda25dea9f6676d76ca1fce6437d4
+PODFILE CHECKSUM: 2e0645168bd3e1920ffe8e757fc854c96ae2ebfc
 
 COCOAPODS: 1.8.4

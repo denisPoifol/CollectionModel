@@ -66,7 +66,7 @@ public struct TableViewModel<HeaderFooterViewModel, CellViewModel> {
 extension TableViewModel: Equatable where CellViewModel: Equatable, HeaderFooterViewModel: Equatable {}
 extension TableViewModel: Hashable where CellViewModel: Hashable, HeaderFooterViewModel: Hashable {}
 
-extension TableViewModel: Collection {
+extension TableViewModel: RandomAccessCollection {
     public typealias Index = Int
     public typealias Element = TableViewSectionViewModel<HeaderFooterViewModel, CellViewModel>
 

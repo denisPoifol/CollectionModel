@@ -46,6 +46,10 @@ class MainViewController: UIViewController,
             viewController = CollectionViewController<MultipleCellTypesCollectionViewDataSource>()
         case .multipleSupplementaryViews:
             viewController = CollectionViewController<MultipleSuplementaryViewCollectionViewDataSource>()
+        case .animatedTableViewCells:
+            viewController = TableViewController<AnimatedTableViewDataSource>()
+        case .animatedCollectionViewCells:
+            viewController = CollectionViewController<AnimatedCollectionViewDataSource>()
         }
         navigationController?.pushViewController(viewController, animated: true)
     }
