@@ -9,25 +9,23 @@
 import Foundation
 import UIKit
 import CollectionModelCore
+import CollectionModelAnimation
+import DifferenceKit
 
 // MARK: - SimpleCollectionViewDataSource
 class AnimatedCollectionViewDataSource: NSObject,
     UICollectionViewDataSource,
     UICollectionViewDelegate,
+    UICollectionViewDelegateFlowLayout,
     EmptyInit,
     CollectionViewContent {
 
-    typealias ViewModel = CollectionViewModel<Never, ACollectionViewCellModel>
+    typealias ViewModel = CollectionViewModel<Never, AnimatableCollectionViewCellModel>
 
     var viewModel = ViewModel(
         cells: [
-            "some",
-            "cells",
-            "initialized",
-            "with",
-            "literal",
-            "strings",
-            "Or with the default initializer"
+            AnimatableCollectionViewCellModel(id: UUID(), title: "Add cell", action: .addCell),
+            AnimatableCollectionViewCellModel(id: UUID(), title: "Shuffle cells", action: .shuffleCells),
         ]
     )
 
@@ -36,7 +34,7 @@ class AnimatedCollectionViewDataSource: NSObject,
     }
 
     func register(in collectionView: UICollectionView) {
-        collectionView.register(cell: .class(ACollectionViewCell.self))
+        collectionView.register(cell: .class(AnimatableCollectionViewCell.self))
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -53,13 +51,30 @@ class AnimatedCollectionViewDataSource: NSObject,
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ACollectionViewCell = collectionView.dequeueCell(at: indexPath)
+        let cell: AnimatableCollectionViewCell = collectionView.dequeueCell(at: indexPath)
         cell.configure(with: viewModel.cellViewModel(at: indexPath))
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Do someting
+        let action = viewModel.cellViewModel(at: indexPath).action
+        switch action {
+        case .addCell:
+            var extendedViewModel = viewModel
+            extendedViewModel.sections[0]
+                .append(AnimatableCollectionViewCellModel(id: UUID(), title: "Shuffle cells", action: .shuffleCells))
+            let changeSet = StagedChangeset<ViewModel>(source: viewModel, target: extendedViewModel)
+            collectionView.reload(using: changeSet) { viewModel in
+                self.viewModel = viewModel
+            }
+        case .shuffleCells:
+            var shuffled = viewModel
+            shuffled.sections[0].cells = shuffled.sections[0].shuffled()
+            let changeSet = StagedChangeset<ViewModel>(source: viewModel, target: shuffled)
+            collectionView.reload(using: changeSet) { viewModel in
+                self.viewModel = viewModel
+            }
+        }
     }
 }
 

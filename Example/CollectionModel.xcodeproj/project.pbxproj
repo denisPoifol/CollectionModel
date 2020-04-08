@@ -22,6 +22,8 @@
 		927DC4E4243C99AF004A3673 /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */; };
 		927DC4E6243C9A58004A3673 /* AnimatableTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */; };
 		927DC4EC243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */; };
+		927DC4EE243DF1BB004A3673 /* AnimatableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4ED243DF1BB004A3673 /* AnimatableCollectionViewCell.swift */; };
+		927DC4F0243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4EF243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift */; };
 		9281A9A62417A2EF00F732AA /* SmoothDeselection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9A52417A2EF00F732AA /* SmoothDeselection.swift */; };
 		9281A9A92417A72700F732AA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9A82417A72700F732AA /* TableViewController.swift */; };
 		9281A9AC2417A8BD00F732AA /* SimpleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */; };
@@ -88,6 +90,8 @@
 		927DC4E3243C99AF004A3673 /* AnimatableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCell.swift; sourceTree = "<group>"; };
 		927DC4E5243C9A58004A3673 /* AnimatableTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCellModel.swift; sourceTree = "<group>"; };
 		927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		927DC4ED243DF1BB004A3673 /* AnimatableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableCollectionViewCell.swift; sourceTree = "<group>"; };
+		927DC4EF243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableCollectionViewCellModel.swift; sourceTree = "<group>"; };
 		9281A9A52417A2EF00F732AA /* SmoothDeselection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothDeselection.swift; sourceTree = "<group>"; };
 		9281A9A82417A72700F732AA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9281A9AB2417A8BD00F732AA /* SimpleTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -326,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				927DC4EB243CBD34004A3673 /* AnimatedCollectionViewDataSource.swift */,
+				927DC4ED243DF1BB004A3673 /* AnimatableCollectionViewCell.swift */,
+				927DC4EF243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift */,
 			);
 			name = CollectionView;
 			sourceTree = "<group>";
@@ -579,6 +585,7 @@
 			files = (
 				9253099B242E11F6001875B3 /* SimpleCollectionViewDataSource.swift in Sources */,
 				927DC4E4243C99AF004A3673 /* AnimatableTableViewCell.swift in Sources */,
+				927DC4EE243DF1BB004A3673 /* AnimatableCollectionViewCell.swift in Sources */,
 				9293840E243340B400F138C7 /* BCollectionViewSupplementaryView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				9281A9AF2417A93700F732AA /* ATableViewCell.swift in Sources */,
@@ -592,6 +599,7 @@
 				929384032433389400F138C7 /* BCollectionViewCell.swift in Sources */,
 				927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */,
 				9281A9BA2417B2BE00F732AA /* ATableViewHeaderFooterView.swift in Sources */,
+				927DC4F0243DF1C9004A3673 /* AnimatableCollectionViewCellModel.swift in Sources */,
 				927DC4E6243C9A58004A3673 /* AnimatableTableViewCellModel.swift in Sources */,
 				927DC4E2243C994F004A3673 /* AnimatedTableViewDataSource.swift in Sources */,
 				92938410243340C000F138C7 /* BCollectionViewSupplementaryViewModel.swift in Sources */,

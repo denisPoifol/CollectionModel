@@ -1,15 +1,15 @@
 //
-//  ACollectionViewCell.swift
+//  AnimatableCollectionViewCell.swift
 //  CollectionModel_Example
 //
-//  Created by Denis Poifol on 31/03/2020.
+//  Created by Denis Poifol on 08/04/2020.
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class ACollectionViewCell: UICollectionViewCell {
+class AnimatableCollectionViewCell: UICollectionViewCell {
 
     private let titleLabel = UILabel()
 
@@ -23,7 +23,7 @@ class ACollectionViewCell: UICollectionViewCell {
         setUp()
     }
 
-    func configure(with viewModel: ACollectionViewCellModel) {
+    func configure(with viewModel: AnimatableCollectionViewCellModel) {
         titleLabel.text = viewModel.title
     }
 
