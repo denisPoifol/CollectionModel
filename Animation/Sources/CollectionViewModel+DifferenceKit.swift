@@ -1,13 +1,18 @@
 import CollectionModelCore
 import DifferenceKit
 
-extension CollectionViewSectionViewModel: ContentEquatable {
+
+extension CollectionViewSectionViewModel: ContentEquatable where
+    CellViewModel: Hashable & Differentiable,
+    SupplementaryViewModel: Hashable & Differentiable {
     public func isContentEqual(to source: Self) -> Bool {
         return id.isContentEqual(to: source.id)
     }
 }
 
-extension CollectionViewSectionViewModel: ContentIdentifiable {
+extension CollectionViewSectionViewModel: ContentIdentifiable where
+    CellViewModel: Hashable & Differentiable,
+    SupplementaryViewModel: Hashable & Differentiable {
     public var differenceIdentifier: String {
         return id
     }

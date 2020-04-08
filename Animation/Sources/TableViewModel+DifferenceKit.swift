@@ -9,13 +9,17 @@ import Foundation
 import CollectionModelCore
 import DifferenceKit
 
-extension TableViewSectionViewModel: ContentEquatable {
+extension TableViewSectionViewModel: ContentEquatable where
+    CellViewModel: Hashable & Differentiable,
+    HeaderFooterViewModel: Hashable & Differentiable {
     public func isContentEqual(to source: TableViewSectionViewModel<HeaderFooterViewModel, CellViewModel>) -> Bool {
         return id.isContentEqual(to: source.id)
     }
 }
 
-extension TableViewSectionViewModel: ContentIdentifiable {
+extension TableViewSectionViewModel: ContentIdentifiable where
+    CellViewModel: Hashable & Differentiable,
+    HeaderFooterViewModel: Hashable & Differentiable {
     public var differenceIdentifier: String {
         return id
     }
