@@ -1,4 +1,8 @@
 PODS:
+  - CollectionModel (0.0.1):
+    - CollectionModel/Animation (= 0.0.1)
+  - CollectionModel/Animation (0.0.1):
+    - CollectionModelAnimation (= 0.0.1)
   - CollectionModelAnimation (0.0.1):
     - CollectionModelCore (= 0.0.1)
     - DifferenceKit (= 1.1.5)
@@ -11,24 +15,24 @@ PODS:
     - DifferenceKit/Core
 
 DEPENDENCIES:
-  - CollectionModelAnimation (from `../`)
-  - CollectionModelCore (from `../`)
+  - CollectionModel (from `../`)
 
 SPEC REPOS:
   trunk:
+    - CollectionModelAnimation
+    - CollectionModelCore
     - DifferenceKit
 
 EXTERNAL SOURCES:
-  CollectionModelAnimation:
-    :path: "../"
-  CollectionModelCore:
+  CollectionModel:
     :path: "../"
 
 SPEC CHECKSUMS:
+  CollectionModel: 53ad0f10a078e9b235b3dfe9aaae1a29a4961616
   CollectionModelAnimation: 3c49d173a7ba7dbc27c194ba14411cbe43516b0a
   CollectionModelCore: 5a1a01dbfd89814434b205affbe3622a83456f27
   DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
 
-PODFILE CHECKSUM: 2e0645168bd3e1920ffe8e757fc854c96ae2ebfc
+PODFILE CHECKSUM: 6453c768bb676c83a006eee68becdaf0df02ab6f
 
 COCOAPODS: 1.8.4

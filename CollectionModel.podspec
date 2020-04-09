@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CollectionModel'
-  s.version          = '0.0.1'
+  s.version          = '0.1.1'
   s.summary          = 'ViewModels for collectionViews and tableViews.'
   s.description      = <<-DESC
 CollectionModel provide two struct to represente viewModels for collectionViews and tableViews. This viewModel are meant to be dull and contains no logic at all and be completely descriptives of the views they represent.
@@ -15,10 +15,14 @@ CollectionModel provide two struct to represente viewModels for collectionViews 
   s.social_media_url = 'https://twitter.com/DenisPoifol'
 
   s.swift_versions = ['5.0', '5.1']
-  s.ios.deployment_target = '8.0'
-  s.default_subspec = 'Core'
+  s.ios.deployment_target = '9.0'
+  s.default_subspec = 'Animation'
 
   s.subspec 'Core' do |ss|
     ss.ios.dependency 'CollectionModelCore', '0.0.1'
+  end
+
+  s.subspec 'Animation' do |ss|
+    ss.ios.dependency 'CollectionModelAnimation', '0.0.1'
   end
 end
