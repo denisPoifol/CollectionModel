@@ -7,7 +7,8 @@
 
 import Foundation
 
-/// Suplementary view are identified by an index path and their kind which is a string
+/// Suplementary view are identified by an index path and their kind which is a string, `SupplementaryKey`
+/// is a simple struct that regroup both information to easily access your SupplementaryView viewModel.
 public struct SupplementaryViewKey: Hashable {
 
     public init(indexPath: IndexPath, kind: String) {
