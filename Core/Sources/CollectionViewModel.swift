@@ -20,12 +20,6 @@ import UIKit
 public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
     public typealias Section = CollectionViewSectionViewModel<SupplementaryViewModel, CellViewModel>
 
-    /// Suplementary view are identified by an index path and their kind which is a string
-    public struct SupplementaryViewKey: Hashable {
-        let indexPath: IndexPath
-        let kind: String
-    }
-
     /// An array of the section viewModels
     public var sections: [CollectionViewSectionViewModel<SupplementaryViewModel, CellViewModel>]
 
