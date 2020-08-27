@@ -1,7 +1,8 @@
 use_frameworks!
 
 target 'CollectionModel_Example' do
-  pod 'CollectionModel', :path => '../'
+  pod 'CollectionModelCore', :path => '../'
+  pod 'CollectionModelAnimation', :path => '../'
 
   target 'CollectionModel_Tests' do
     inherit! :search_paths
