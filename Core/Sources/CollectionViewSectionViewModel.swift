@@ -16,12 +16,6 @@ import Foundation
 /// header and footer are stored appart from the suplementary views
 public struct CollectionViewSectionViewModel<SupplementaryViewModel, CellViewModel> {
 
-    /// Suplementary view are identified by an index path and their kind which is a string
-    public struct SupplementaryViewSectionKey: Hashable {
-        let row: Int
-        let kind: String
-    }
-
     /// The `SuplementaryViewModel` reprensenting the header of the section
     public var header: SupplementaryViewModel?
     /// The `SuplementaryViewModel` reprensenting the footer of the section

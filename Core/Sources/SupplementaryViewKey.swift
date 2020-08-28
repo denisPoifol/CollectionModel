@@ -19,3 +19,18 @@ public struct SupplementaryViewKey: Hashable {
     public let indexPath: IndexPath
     public let kind: String
 }
+
+
+/// Suplementary view are identified by an index path and their kind which is a string, but in a given
+///  section we only need a row indice. `SupplementaryViewSectionKey` is a simple struct that regroup
+///  both information to easily access your SupplementaryView viewModel.
+public struct SupplementaryViewSectionKey: Hashable {
+
+    public init(row: Int, kind: String) {
+        self.row = row
+        self.kind = kind
+    }
+
+    public let row: Int
+    public let kind: String
+}

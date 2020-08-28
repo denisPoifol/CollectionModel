@@ -69,7 +69,7 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
     /// - Returns: The viewModel representing the supplementary view if it exists
     public func supplementaryViewModel(for key: SupplementaryViewKey) -> SupplementaryViewModel? {
         guard sections.count > key.indexPath.section else { return nil }
-        let sectionKey = Section.SupplementaryViewSectionKey(row: key.indexPath.row, kind: key.kind)
+        let sectionKey = SupplementaryViewSectionKey(row: key.indexPath.row, kind: key.kind)
         return sections[key.indexPath.section][sectionKey]
     }
 
