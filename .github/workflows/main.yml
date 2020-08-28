@@ -12,10 +12,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup Ruby for use with actions
-      uses: actions/setup-ruby@v1.0.0
+
+    - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7'
+        ruby-version: 2.7.0
+
+    - name: Ruby cache
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
     - name: Update bundler
       working-directory: ./Example
       run: bundle update --bundler
