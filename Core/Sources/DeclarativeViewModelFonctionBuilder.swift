@@ -8,24 +8,37 @@
 import Foundation
 
 @_functionBuilder
-struct DeclarativeViewModelFonctionBuilder<ViewModel> {
-    static func buildExpression(_ viewModel: ViewModel) -> [ViewModel] {
+public struct DeclarativeViewModelFonctionBuilder<ViewModel> {
+    public static func buildExpression(_ viewModel: ViewModel) -> [ViewModel] {
         [viewModel]
     }
 
-    static func buildBlock(_ viewModels: [ViewModel]...) -> [ViewModel] {
+    public static func buildExpression(_ viewModels: [ViewModel]) -> [ViewModel] {
+        viewModels
+    }
+
+    public static func buildExpression<C: Collection>(_ viewModels: C) -> [ViewModel]
+        where C.Element == ViewModel {
+        viewModels.map { $0 }
+    }
+
+    public static func buildBlock(_ viewModels: [ViewModel]...) -> [ViewModel] {
         viewModels.flatMap { $0 }
     }
 
-    static func buildIf(_ viewModel: [ViewModel]?) -> [ViewModel] {
+    public static func buildBlock(_ viewModels: ViewModel...) -> [ViewModel] {
+        viewModels
+    }
+
+    public static func buildIf(_ viewModel: [ViewModel]?) -> [ViewModel] {
         viewModel ?? []
     }
 
-    static func buildEither(first: [ViewModel]) -> [ViewModel] {
+    public static func buildEither(first: [ViewModel]) -> [ViewModel] {
         first
     }
 
-    static func buildEither(second: [ViewModel]) -> [ViewModel] {
+    public static func buildEither(second: [ViewModel]) -> [ViewModel] {
         second
     }
 }

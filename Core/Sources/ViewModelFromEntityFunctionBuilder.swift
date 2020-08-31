@@ -8,26 +8,26 @@
 import Foundation
 
 @_functionBuilder
-struct ViewModelFromEntityFunctionBuilder<ViewModel, Entity> {
+public struct ViewModelFromEntityFunctionBuilder<ViewModel, Entity> {
     let entity: Entity
 
-    static func buildExpression(_ viewModel: ViewModel) -> [ViewModel] {
+    public static func buildExpression(_ viewModel: ViewModel) -> [ViewModel] {
         [viewModel]
     }
 
-    static func buildBlock(_ viewModels: [ViewModel]...) -> [ViewModel] {
+    public static func buildBlock(_ viewModels: [ViewModel]...) -> [ViewModel] {
         viewModels.flatMap { $0 }
     }
 
-    static func buildIf(_ viewModel: [ViewModel]?) -> [ViewModel] {
+    public static func buildIf(_ viewModel: [ViewModel]?) -> [ViewModel] {
         viewModel ?? []
     }
 
-    static func buildEither(first: [ViewModel]) -> [ViewModel] {
+    public static func buildEither(first: [ViewModel]) -> [ViewModel] {
         first
     }
 
-    static func buildEither(second: [ViewModel]) -> [ViewModel] {
+    public static func buildEither(second: [ViewModel]) -> [ViewModel] {
         second
     }
 }
