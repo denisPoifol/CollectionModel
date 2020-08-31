@@ -1,7 +1,7 @@
 import XCTest
 import CollectionModelCore
 
-class CollectionViewModelFunctionBuilderTest: XCTestCase {
+class CollectionViewModelDeclarativeFunctionBuilderTest: XCTestCase {
 
     typealias ViewModel = CollectionViewModel<String, Int>
     typealias Section = ViewModel.Section
@@ -10,16 +10,16 @@ class CollectionViewModelFunctionBuilderTest: XCTestCase {
     func testDeclarativeFunctionBuilder() {
         // MARK: - single section
         let section = Section()
-        _ = CollectionViewModel {
+        _ = ViewModel {
             section
         }
         // MARK: - multiple section
-        _ = CollectionViewModel {
+        _ = ViewModel {
             section
             section
         }
         // MARK: - section and collection of sections
-        _ = CollectionViewModel {
+        _ = ViewModel {
             section
             [
                 section,
@@ -27,7 +27,7 @@ class CollectionViewModelFunctionBuilderTest: XCTestCase {
             ]
         }
         // MARK: - if else statement
-        _ = CollectionViewModel {
+        _ = ViewModel {
             section
             if Bool.random() {
                 [

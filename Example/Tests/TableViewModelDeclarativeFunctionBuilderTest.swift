@@ -1,7 +1,7 @@
 import XCTest
 import CollectionModelCore
 
-class TableViewModelFunctionBuilderTest: XCTestCase {
+class TableViewModelDeclarativeFunctionBuilderTest: XCTestCase {
 
     typealias ViewModel = TableViewModel<String, Int>
     typealias Section = ViewModel.Section
