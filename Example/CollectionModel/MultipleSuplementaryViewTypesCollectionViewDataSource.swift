@@ -26,40 +26,39 @@ class MultipleSuplementaryViewCollectionViewDataSource: NSObject,
 
     typealias ViewModel = CollectionViewModel<MultipleSuplementaryViewModel, MultipleCellTypesCollectionViewCellModel>
 
-    var viewModel = ViewModel(
-        sections: [
-            ViewModel.Section(
-                header: .aSupplementaryView("headser of type A"),
-                footer: .bSupplementaryView("footer of type B"),
-                cells: [
-                    .a("Some A cell"),
-                    .b("Some B cell"),
-                ]
-            ),
-            ViewModel.Section(
-                header: .bSupplementaryView("header of type B"),
-                footer: .aSupplementaryView("footer of type A"),
-                cells: [
-                    .a("Some A cell"),
-                    .b("Some B cell"),
-                ]
-            ),
-            ViewModel.Section(
-                footer: .bSupplementaryView("footer of type A"),
-                cells: [
-                    .a("Some A cell"),
-                    .b("Some B cell"),
-                ]
-            ),
-            ViewModel.Section(
-                header: .bSupplementaryView("header of type B"),
-                cells: [
-                    .a("Some A cell"),
-                    .b("Some B cell"),
-                ]
-            )
-        ]
-    )
+    // Using Declarative view builder init for ViewModel
+    var viewModel = ViewModel {
+        // Using Declarative view builder init for ViewModel.Section
+        ViewModel.Section(
+            header: .aSupplementaryView("headser of type A"),
+            footer: .bSupplementaryView("footer of type B")
+        ) {
+                MultipleCellTypesCollectionViewCellModel.a("Some A cell")
+                MultipleCellTypesCollectionViewCellModel.b("Some B cell")
+        }
+        ViewModel.Section(
+            header: .bSupplementaryView("header of type B"),
+            footer: .aSupplementaryView("footer of type A"),
+            cells: [
+                .a("Some A cell"),
+                .b("Some B cell"),
+            ]
+        )
+        ViewModel.Section(
+            footer: .bSupplementaryView("footer of type A"),
+            cells: [
+                .a("Some A cell"),
+                .b("Some B cell"),
+            ]
+        )
+        ViewModel.Section(
+            header: .bSupplementaryView("header of type B"),
+            cells: [
+                .a("Some A cell"),
+                .b("Some B cell"),
+            ]
+        )
+    }
 
     required override init() {
         super.init()
