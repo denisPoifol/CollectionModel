@@ -105,6 +105,53 @@ enum MultipleCellTypesCollectionViewCellModel {
 ```
 This will require only to change your implementation of `collectionView(_:cellForItemAt:)` in order to manage both cell type cases.
 
+## Function builders
+
+Since CollectionModelCore 0.1.1 (CollectionModel 0.2.1) it is possible to create viewModel using a declarative syntax provided by function builders. There are two different function builders you can use to create your viewModels or sections.
+
+### Simple declarative
+
+You can create a section or a viewModel in a declarative way :
+```
+Section {
+    cell1
+    if condition {
+        [
+            cell2,
+            cell3,
+        ]
+    } else {
+        cell4
+    }
+}
+```
+this implementation supports `if/else` statement which means it also supports `switch`. And as you can see from the example you can return either a cell or a collection of cells per line. Be careful though it supports any collection of cells so watch out for unordered collections.
+
+### Entity based
+
+Since it is not possible at the moment to support for loops in function builder, a different function builder is provided based on an iteration over an array of entities.
+Most of the time your implementation is going to look like this: 
+```
+Section(entities: entities) { entity in
+    cell1(for: entity)
+}
+```
+But some times you might want to return multiple cells for a single entity, this is also possible.
+```
+Section(entities: entities) { entity in
+    cell1(for: entity)
+    if condition {
+        [
+            cell2(for: entity),
+            cell3(for: entity),
+        ]
+    } else {
+        cell(for: entity)
+    }
+}
+```
+As you can see this implementation also supports `if/else` statements and returning collections instead of single elements.
+
 ## Requirements
 
 There is no technical requirement to use this pod other than using swift.
