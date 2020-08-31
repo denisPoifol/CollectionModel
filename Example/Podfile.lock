@@ -2,7 +2,7 @@ PODS:
   - CollectionModelAnimation (0.0.2):
     - CollectionModelCore (~> 0)
     - DifferenceKit (= 1.1.5)
-  - CollectionModelCore (0.1.0)
+  - CollectionModelCore (0.1.1)
   - DifferenceKit (1.1.5):
     - DifferenceKit/Core (= 1.1.5)
     - DifferenceKit/UIKitExtension (= 1.1.5)
@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CollectionModelAnimation: 463beaec0e6b9fecc2bb2477ce173555aae56d3d
-  CollectionModelCore: 90ea9430449e03b34cb47eea4f7602704b114c78
+  CollectionModelCore: da9c92979487da0387e16d6493661b2a055cf674
   DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
 
 PODFILE CHECKSUM: 2e0645168bd3e1920ffe8e757fc854c96ae2ebfc
