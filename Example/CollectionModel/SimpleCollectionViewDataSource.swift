@@ -19,17 +19,19 @@ class SimpleCollectionViewDataSource: NSObject,
 
     typealias ViewModel = CollectionViewModel<Never, ACollectionViewCellModel>
 
-    var viewModel = ViewModel(
-        cells: [
-            "some",
-            "cells",
-            "initialized",
-            "with",
-            "literal",
-            "strings",
-            "Or with the default initializer"
-        ]
-    )
+    private var entities: [String] = [
+        "some",
+        "cells",
+        "initialized",
+        "with",
+        "literal",
+        "strings",
+        "Or with the default initializer"
+    ]
+    lazy var section = ViewModel.Section {
+        ACollectionViewCellModel(title: entities[0])
+    }
+    lazy var viewModel = ViewModel(section: section)
 
     required override init() {
         super.init()
