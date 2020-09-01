@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CollectionModelCore'
-  s.version          = '0.1.1'
+  s.version          = '0.2.1'
   s.summary          = 'ViewModels for collectionViews and tableViews.'
   s.description      = <<-DESC
 CollectionModel provide two struct to represente viewModels for collectionViews and tableViews. This viewModel are meant to be dull and contains no logic at all and be completely descriptives of the views they represent.
