@@ -52,7 +52,7 @@ extension TableViewSectionViewModel: RandomAccessCollection {
     public var endIndex: Int { cells.endIndex }
 
     public subscript(index: Index) -> CellViewModel {
-        get { return cells[index] }
+        get { cells[index] }
         set { cells[index] = newValue }
     }
 

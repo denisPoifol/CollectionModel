@@ -59,7 +59,8 @@ public struct TableViewModel<HeaderFooterViewModel, CellViewModel> {
     /// - Parameter indexPath: A valid index path for the given collectionViewModel
     /// - Returns: The viewModel representing the cell
     public subscript(indexPath: IndexPath) -> CellViewModel {
-        return sections[indexPath.section][indexPath.row]
+        get { sections[indexPath.section][indexPath.row] }
+        set { sections[indexPath.section][indexPath.row] = newValue }
     }
 }
 

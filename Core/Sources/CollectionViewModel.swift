@@ -89,7 +89,8 @@ extension CollectionViewModel: RandomAccessCollection {
     public var endIndex: Int { return sections.endIndex }
 
     public subscript(index: Index) -> Element {
-        sections[index]
+        get { sections[index] }
+        set { sections[index] = newValue }
     }
 
     public func index(after i: Index) -> Index {

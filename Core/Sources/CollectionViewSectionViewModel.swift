@@ -53,7 +53,8 @@ public struct CollectionViewSectionViewModel<SupplementaryViewModel, CellViewMod
     }
 
     public subscript(index: SupplementaryViewSectionKey) -> SupplementaryViewModel? {
-        supplementaryViewModels[index]
+        get { supplementaryViewModels[index] }
+        set { supplementaryViewModels[index] = newValue }
     }
 }
 
@@ -65,7 +66,8 @@ extension CollectionViewSectionViewModel: RandomAccessCollection {
     public var endIndex: Int { cells.endIndex }
 
     public subscript(index: Index) -> Element {
-        cells[index]
+        get { cells[index] }
+        set { cells[index] = newValue }
     }
 
     public func index(after i: Index) -> Index {
