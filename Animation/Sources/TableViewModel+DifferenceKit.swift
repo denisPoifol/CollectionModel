@@ -14,6 +14,8 @@ extension TableViewSectionViewModel: ContentEquatable where
     HeaderFooterViewModel: Hashable & Differentiable {
     public func isContentEqual(to source: TableViewSectionViewModel<HeaderFooterViewModel, CellViewModel>) -> Bool {
         return id.isContentEqual(to: source.id)
+            && header.isContentEqual(to: source.header)
+            && footer.isContentEqual(to: source.footer)
     }
 }
 
