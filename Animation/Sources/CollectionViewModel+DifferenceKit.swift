@@ -1,12 +1,25 @@
 import CollectionModelCore
 import DifferenceKit
 
+extension Dictionary: ContentEquatable where Value: ContentEquatable {
+    public func isContentEqual(to source: [Key: Value]) -> Bool {
+        guard keys == source.keys else { return false }
+        for (key, value) in self {
+            guard let sourceValue = source[key] else { return false }
+            if !value.isContentEqual(to: sourceValue) { return false }
+        }
+        return true
+    }
+}
 
 extension CollectionViewSectionViewModel: ContentEquatable where
     CellViewModel: Hashable & Differentiable,
     SupplementaryViewModel: Hashable & Differentiable {
     public func isContentEqual(to source: Self) -> Bool {
         return id.isContentEqual(to: source.id)
+            && supplementaryViewModels.isContentEqual(to: source.supplementaryViewModels)
+            && header.isContentEqual(to: source.header)
+            && footer.isContentEqual(to: source.footer)
     }
 }
 
