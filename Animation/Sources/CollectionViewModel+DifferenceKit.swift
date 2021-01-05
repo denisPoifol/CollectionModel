@@ -13,8 +13,7 @@ extension Dictionary: ContentEquatable where Value: ContentEquatable {
 }
 
 extension CollectionViewSectionViewModel: ContentEquatable where
-    CellViewModel: Hashable & Differentiable,
-    SupplementaryViewModel: Hashable & Differentiable {
+    SupplementaryViewModel: ContentEquatable {
     public func isContentEqual(to source: Self) -> Bool {
         return id.isContentEqual(to: source.id)
             && supplementaryViewModels.isContentEqual(to: source.supplementaryViewModels)
@@ -23,9 +22,7 @@ extension CollectionViewSectionViewModel: ContentEquatable where
     }
 }
 
-extension CollectionViewSectionViewModel: ContentIdentifiable where
-    CellViewModel: Hashable & Differentiable,
-    SupplementaryViewModel: Hashable & Differentiable {
+extension CollectionViewSectionViewModel: ContentIdentifiable {
     public var differenceIdentifier: String {
         return id
     }
@@ -38,8 +35,8 @@ extension CollectionViewSectionViewModel: ContentIdentifiable where
 /// Note that Never conformance to Hashable is handled by Swift and conformance to Differentiable is handled
 /// by this pod.
 extension CollectionViewSectionViewModel: DifferentiableSection where
-    CellViewModel: Hashable & Differentiable,
-    SupplementaryViewModel: Hashable & Differentiable {
+    CellViewModel: Differentiable,
+    SupplementaryViewModel: ContentEquatable {
     public init<C>(source: CollectionViewSectionViewModel,
                    elements: C) where C: Swift.Collection, C.Element == CellViewModel {
         self.init(
