@@ -26,10 +26,9 @@ extension TableViewSectionViewModel: ContentIdentifiable {
 
 /// This conformance allows for DifferenceKit to create StagedChangeSet which in turn enable to animate changes.
 /// If you find yourself unable to create a changeSet using StagedChangeSet(source:,target:) with you ViewModel
-/// you should check on the conditions which are that your CellViewModel conforms to Hashable and Differentiable
-/// and the same goes for your HeaderFooterViewModel.
-/// Note that Never conformance to Hashable is handled by Swift and conformance to Differentiable is handled
-/// by this pod.
+/// you should check on the conditions which are that your CellViewModel conforms to Differentiable
+/// and HeaderFooterViewModel conforms to ContentEquatable.
+/// Note that Never conformance to Differentiable is handled by this pod.
 extension TableViewSectionViewModel: DifferentiableSection where
     CellViewModel: Differentiable,
     HeaderFooterViewModel: ContentEquatable {
