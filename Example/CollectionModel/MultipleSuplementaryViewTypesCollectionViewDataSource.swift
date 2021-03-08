@@ -134,6 +134,12 @@ class MultipleSupplementaryViewCollectionViewDataSource: NSObject,
             "[\(type(of: self))] failed to create supplementary view for indexPath: \(indexPath) of kind: \(kind)"
         )
         return UICollectionReusableView()
+        // If you are confident kind reflects a header or a footer you can also retrieve the
+        // supplementary viewModel with the following implementation
+        //  guard let viewModel = viewModel.headerOrFooterViewModel(forKind: kind, inSection: indexPath.section) else {
+        //      return UICollectionReusableView()
+        //  }
+        // return a supplementary view configured with your ViewModel
     }
 
     // MARK: - Private
