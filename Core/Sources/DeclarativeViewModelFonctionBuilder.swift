@@ -70,7 +70,7 @@ public extension CollectionViewSectionViewModel {
     /// the other parameters remaind unchanged from classic function declaration
     ///
     /// - Parameter id: An id for the section
-    /// - Parameter supplementaryViewModels: A dictionnary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
+    /// - Parameter supplementaryViewModels: A dictionary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
     /// - Parameter header: A `SupplementaryViewModel` for the section header
     /// - Parameter footer: A `SupplementaryViewModel` for the section footer
     /// - Parameter cellsBuilder: returns an array of cells
@@ -92,7 +92,7 @@ public extension CollectionViewSectionViewModel {
     /// this function provides a work around for this special case
     ///
     /// - Parameter id: An id for the section
-    /// - Parameter supplementaryViewModels: A dictionnary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
+    /// - Parameter supplementaryViewModels: A dictionary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
     /// - Parameter header: A `SupplementaryViewModel` for the section header
     /// - Parameter footer: A `SupplementaryViewModel` for the section footer
     /// - Parameter cellsBuilder: returns a cell
