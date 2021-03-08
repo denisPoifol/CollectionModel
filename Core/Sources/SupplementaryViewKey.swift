@@ -18,6 +18,11 @@ public struct SupplementaryViewKey: Hashable {
 
     public let indexPath: IndexPath
     public let kind: String
+
+    /// Returns the `SupplementaryViewSectionKey` built from the indexPath row and the kind stored by the `SupplementaryViewKey`
+    public var sectionKey: SupplementaryViewSectionKey {
+        SupplementaryViewSectionKey(row: indexPath.row, kind: kind)
+    }
 }
 
 

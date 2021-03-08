@@ -63,6 +63,42 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
         sections[indexPath.section][indexPath.row]
     }
 
+    /// Returns the `SupplementaryViewModel` corresponding to the header of the given section index
+    ///
+    /// - Parameter index: The section's index
+    /// - Returns: The viewModel representing the supplementary view if it exists
+    public subscript(header index: Int) -> SupplementaryViewModel? {
+        get { sections[index].header }
+        set { sections[index].header = newValue }
+    }
+
+    /// Returns the `SupplementaryViewModel` corresponding to the footer of the given section index
+    ///
+    /// - Parameter index: The section's index
+    /// - Returns: The viewModel representing the supplementary view if it exists
+    public subscript(footer index: Int) -> SupplementaryViewModel? {
+        get { sections[index].footer }
+        set { sections[index].footer = newValue }
+    }
+
+    /// Returns the `CellViewModel` corresponding to the given `IndexPath`
+    ///
+    /// - Parameter indexPath: A valid index path for the given collectionViewModel
+    /// - Returns: The viewModel representing the cell
+    public subscript(cellAt indexPath: IndexPath) -> CellViewModel {
+        get { sections[indexPath.section][indexPath.row] }
+        set { sections[indexPath.section][indexPath.row] = newValue }
+    }
+
+    /// Returns the `SupplementaryViewModel` corresponding to the given `SupplementaryViewKey`
+    ///
+    /// - Parameter key: A `SupplementaryViewKey` formed with an `IndexPath` and specific supplementaryView kind
+    /// - Returns: The viewModel representing the supplementary view if it exists
+    public subscript(supplementaryViewFor key: SupplementaryViewKey) -> SupplementaryViewModel? {
+        get { sections[key.indexPath.section][key.sectionKey] }
+        set { sections[key.indexPath.section][key.sectionKey]  = newValue }
+    }
+
     /// Returns the `SupplementaryViewModel` corresponding to the given `SupplementaryViewKey`
     ///
     /// - Parameter key: A `SupplementaryViewKey` formed with an `IndexPath` and specific supplementaryView kind
