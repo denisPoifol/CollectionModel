@@ -8,7 +8,7 @@ class TableViewModelEntityFunctionBuilderTest: XCTestCase {
     typealias CellViewModel = Int
     var entities = (1...10).map { $0 }
 
-    // These test make sur compilation is successfull with function builders
+    // These test make sure compilation is successfull with function builders
     func testDeclarativeFunctionBuilder() {
         // MARK: - single section
         _ = ViewModel(entities: entities) {

@@ -55,7 +55,7 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
     /// A lazy collection of the sections footer
     public var footers: LazyMapCollection<[Section], SupplementaryViewModel?> { sections.lazy.map { $0.footer } }
 
-    /// Return the `CellViewModel` corresponding to the given `IndexPath`
+    /// Returns the `CellViewModel` corresponding to the given `IndexPath`
     ///
     /// - Parameter indexPath: A valid index path for the given collectionViewModel
     /// - Returns: The viewModel representing the cell
@@ -63,7 +63,7 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
         sections[indexPath.section][indexPath.row]
     }
 
-    /// Return the `SupplementaryViewModel` corresponding to the given `SupplementaryViewKey`
+    /// Returns the `SupplementaryViewModel` corresponding to the given `SupplementaryViewKey`
     ///
     /// - Parameter key: A `SupplementaryViewKey` formed with an `IndexPath` and specific supplementaryView kind
     /// - Returns: The viewModel representing the supplementary view if it exists
@@ -73,7 +73,7 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
         return sections[key.indexPath.section][sectionKey]
     }
 
-    /// Return the `SupplementaryViewModel` corresponding to the header of footer of the given section index
+    /// Returns the `SupplementaryViewModel` corresponding to the header of footer of the given section index
     /// This can also be achieved with `sections[sectionIndex].header`/`sections[sectionIndex].footer` or
     /// even `headers[sectionIndex]`/`footers[sectionIndex`
     ///
@@ -93,7 +93,7 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
         }
     }
 
-    /// Return the number of items in the section
+    /// Returns the number of items in the section
     ///
     /// - Parameter section: The section for which we want the number of items
     public func numberOfItemsInSection(_ section: Int) -> Int {
