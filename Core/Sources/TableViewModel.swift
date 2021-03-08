@@ -62,6 +62,24 @@ public struct TableViewModel<HeaderFooterViewModel, CellViewModel> {
         get { sections[indexPath.section][indexPath.row] }
         set { sections[indexPath.section][indexPath.row] = newValue }
     }
+
+    /// Return the `HeaderFooterViewModel` corresponding to the header at the given section index
+    ///
+    /// - Parameter section: A valid section index for the given collectionViewModel
+    /// - Returns: The viewModel representing the headerViewModel
+    public subscript(header section: Int) -> HeaderFooterViewModel? {
+        get { sections[section].header }
+        set { sections[section].header = newValue }
+    }
+
+    /// Return the `HeaderFooterViewModel` corresponding to the footer at the given section index
+    ///
+    /// - Parameter section: A valid section index for the given collectionViewModel
+    /// - Returns: The viewModel representing the footerViewModel
+    public subscript(footer section: Int) -> HeaderFooterViewModel? {
+        get { sections[section].footer }
+        set { sections[section].footer = newValue }
+    }
 }
 
 extension TableViewModel: Equatable where CellViewModel: Equatable, HeaderFooterViewModel: Equatable {}

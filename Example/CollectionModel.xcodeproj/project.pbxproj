@@ -21,6 +21,7 @@
 		92530998242E1168001875B3 /* EmptyInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92530997242E1168001875B3 /* EmptyInit.swift */; };
 		9253099B242E11F6001875B3 /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */; };
 		926C921825F621A000EE28AA /* CollectionViewModelSubscriptTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C921725F621A000EE28AA /* CollectionViewModelSubscriptTest.swift */; };
+		926C922425F62B9300EE28AA /* TableViewModelSubscriptTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C922325F62B9300EE28AA /* TableViewModelSubscriptTest.swift */; };
 		927B9F20240978F100AA4FD1 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B9F1F240978F100AA4FD1 /* UIView+Layout.swift */; };
 		927B9F2224097C2500AA4FD1 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B9F2124097C2500AA4FD1 /* UIEdgeInsets.swift */; };
 		927DC4E2243C994F004A3673 /* AnimatedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */; };
@@ -92,6 +93,7 @@
 		92530997242E1168001875B3 /* EmptyInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInit.swift; sourceTree = "<group>"; };
 		9253099A242E11F6001875B3 /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		926C921725F621A000EE28AA /* CollectionViewModelSubscriptTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelSubscriptTest.swift; sourceTree = "<group>"; };
+		926C922325F62B9300EE28AA /* TableViewModelSubscriptTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelSubscriptTest.swift; sourceTree = "<group>"; };
 		927B9F1F240978F100AA4FD1 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		927B9F2124097C2500AA4FD1 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		927DC4E1243C994F004A3673 /* AnimatedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				92317AEB24FCF93C00392206 /* TableViewModelEntityFunctionBuilderTest.swift */,
 				92317AE624FCF0A800392206 /* TableViewModelDeclarativeFunctionBuilderTest.swift */,
 				926C921725F621A000EE28AA /* CollectionViewModelSubscriptTest.swift */,
+				926C922325F62B9300EE28AA /* TableViewModelSubscriptTest.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -643,6 +646,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* CollectionViewModelDeclarativeFunctionBuilderTest.swift in Sources */,
+				926C922425F62B9300EE28AA /* TableViewModelSubscriptTest.swift in Sources */,
 				92317AE824FCF0C700392206 /* TableViewModelDeclarativeFunctionBuilderTest.swift in Sources */,
 				92317AEC24FCF93C00392206 /* TableViewModelEntityFunctionBuilderTest.swift in Sources */,
 				926C921825F621A000EE28AA /* CollectionViewModelSubscriptTest.swift in Sources */,
