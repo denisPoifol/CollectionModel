@@ -45,7 +45,7 @@ class MainViewController: UIViewController,
         case .multipleCollectionViewCells:
             viewController = CollectionViewController<MultipleCellTypesCollectionViewDataSource>()
         case .multipleSupplementaryViews:
-            viewController = CollectionViewController<MultipleSuplementaryViewCollectionViewDataSource>()
+            viewController = CollectionViewController<MultipleSupplementaryViewCollectionViewDataSource>()
         case .animatedTableViewCells:
             viewController = TableViewController<AnimatedTableViewDataSource>()
         case .animatedCollectionViewCells:

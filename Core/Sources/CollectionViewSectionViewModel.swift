@@ -11,19 +11,19 @@ import Foundation
 /// It is generic over two parameters `SupplementaryViewModel` and `CellViewModel`
 /// both parameters are self explanatory they should represent the model used to
 /// configure the cells of the collectionView or the supplementary views which could
-/// be a header a footer or a custom suplementary view
+/// be a header a footer or a custom supplementary view
 ///
-/// header and footer are stored appart from the suplementary views
+/// header and footer are stored appart from the supplementary views
 public struct CollectionViewSectionViewModel<SupplementaryViewModel, CellViewModel> {
 
-    /// The `SuplementaryViewModel` reprensenting the header of the section
+    /// The `SupplementaryViewModel` representing the header of the section
     public var header: SupplementaryViewModel?
-    /// The `SuplementaryViewModel` reprensenting the footer of the section
+    /// The `SupplementaryViewModel` representing the footer of the section
     public var footer: SupplementaryViewModel?
     /// A dictionary storing `SupplementaryViewModels` referenced by their row and kind
-    /// Note that header and footer while being supplementary views are not handled by this dictionnary
+    /// Note that header and footer while being supplementary views are not handled by this dictionary
     public var supplementaryViewModels: [SupplementaryViewSectionKey: SupplementaryViewModel]
-    /// An `Array` of `CellViewModel` reprensenting the cells in the section
+    /// An `Array` of `CellViewModel` representing the cells in the section
     public var cells: [CellViewModel]
     /// An id for the section. This id enables to use *DifferenceKit* to animate the collectionView changes
     public let id: String
@@ -36,7 +36,7 @@ public struct CollectionViewSectionViewModel<SupplementaryViewModel, CellViewMod
     /// Creates a sectionViewModel
     ///
     /// - Parameter id: An id for the section
-    /// - Parameter supplementaryViewModels: A dictionnary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
+    /// - Parameter supplementaryViewModels: A dictionary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
     /// - Parameter header: A `SupplementaryViewModel` for the section header
     /// - Parameter footer: A `SupplementaryViewModel` for the section footer
     /// - Parameter cells: An array of `CellViewModel`

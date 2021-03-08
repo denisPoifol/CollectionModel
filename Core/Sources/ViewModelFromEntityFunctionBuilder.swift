@@ -79,7 +79,7 @@ public extension CollectionViewSectionViewModel {
     ///
     /// - Parameter entities: An array of entities used to create your cells
     /// - Parameter id: An id for the section
-    /// - Parameter supplementaryViewModels: A dictionnary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
+    /// - Parameter supplementaryViewModels: A dictionary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
     /// - Parameter header: A `SupplementaryViewModel` for the section header
     /// - Parameter footer: A `SupplementaryViewModel` for the section footer
     /// - Parameter cellsBuilder: returns an array of cells for each entity in the `entities` array
@@ -103,7 +103,7 @@ public extension CollectionViewSectionViewModel {
     ///
     /// - Parameter entities: An array of entities used to create your cells
     /// - Parameter id: An id for the section
-    /// - Parameter supplementaryViewModels: A dictionnary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
+    /// - Parameter supplementaryViewModels: A dictionary mapping a `SupplementaryViewSectionKey`to a `SupplementaryViewModel`
     /// - Parameter header: A `SupplementaryViewModel` for the section header
     /// - Parameter footer: A `SupplementaryViewModel` for the section footer
     /// - Parameter cellsBuilder: returns a cell for each entity in the `entities` array

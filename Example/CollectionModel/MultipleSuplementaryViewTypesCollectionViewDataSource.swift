@@ -1,5 +1,5 @@
 //
-//  MultipleSuplementaryViewTypesCollectionViewDataSource.swift
+//  MultipleSupplementaryViewTypesCollectionViewDataSource.swift
 //  CollectionModel_Example
 //
 //  Created by Denis Poifol on 31/03/2020.
@@ -11,20 +11,20 @@ import UIKit
 import CollectionModelCore
 
 // MARK: - MultipleHeaderFooterModel
-enum MultipleSuplementaryViewModel {
+enum MultipleSupplementaryViewModel {
     case aSupplementaryView(ACollectionViewSupplementaryViewModel)
     case bSupplementaryView(BCollectionViewSupplementaryViewModel)
 }
 
 // MARK: - MultipleCellTypesCollectionViewDataSource
-class MultipleSuplementaryViewCollectionViewDataSource: NSObject,
+class MultipleSupplementaryViewCollectionViewDataSource: NSObject,
     UICollectionViewDataSource,
     UICollectionViewDelegate,
     UICollectionViewDelegateFlowLayout,
     EmptyInit,
     CollectionViewContent {
 
-    typealias ViewModel = CollectionViewModel<MultipleSuplementaryViewModel, MultipleCellTypesCollectionViewCellModel>
+    typealias ViewModel = CollectionViewModel<MultipleSupplementaryViewModel, MultipleCellTypesCollectionViewCellModel>
 
     // Using Declarative view builder init for ViewModel
     var viewModel = ViewModel {
@@ -134,13 +134,19 @@ class MultipleSuplementaryViewCollectionViewDataSource: NSObject,
             "[\(type(of: self))] failed to create supplementary view for indexPath: \(indexPath) of kind: \(kind)"
         )
         return UICollectionReusableView()
+        // If you are confident kind reflects a header or a footer you can also retrieve the
+        // supplementary viewModel with the following implementation
+        //  guard let viewModel = viewModel.headerOrFooterViewModel(forKind: kind, inSection: indexPath.section) else {
+        //      return UICollectionReusableView()
+        //  }
+        // return a supplementary view configured with your ViewModel
     }
 
     // MARK: - Private
 
     private func dequeueHeader(in collectionView: UICollectionView,
                                at indexPath: IndexPath,
-                               with headerViewModel: MultipleSuplementaryViewModel) -> UICollectionReusableView {
+                               with headerViewModel: MultipleSupplementaryViewModel) -> UICollectionReusableView {
         switch headerViewModel {
         case let .aSupplementaryView(headerViewModel):
             let header: ACollectionViewSupplementaryView = collectionView.dequeueHeader(at: indexPath)
@@ -155,7 +161,7 @@ class MultipleSuplementaryViewCollectionViewDataSource: NSObject,
 
     private func dequeueFooter(in collectionView: UICollectionView,
                                at indexPath: IndexPath,
-                               with headerViewModel: MultipleSuplementaryViewModel) -> UICollectionReusableView {
+                               with headerViewModel: MultipleSupplementaryViewModel) -> UICollectionReusableView {
         switch headerViewModel {
         case let .aSupplementaryView(headerViewModel):
             let header: ACollectionViewSupplementaryView = collectionView.dequeueFooter(at: indexPath)

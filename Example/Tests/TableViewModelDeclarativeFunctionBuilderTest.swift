@@ -6,7 +6,7 @@ class TableViewModelDeclarativeFunctionBuilderTest: XCTestCase {
     typealias ViewModel = TableViewModel<String, Int>
     typealias Section = ViewModel.Section
 
-    // These test make sur compilation is successfull with function builders
+    // These test make sure compilation is successfull with function builders
     func testDeclarativeFunctionBuilder() {
         // MARK: - single section
         let section = Section()

@@ -12,7 +12,7 @@ import UIKit
 /// It is generic over two parameters `SupplementaryViewModel` and `CellViewModel`
 /// both parameters are self explanatory they should represent the models used to
 /// configure the cells of the collectionView or the supplementary views which could
-/// be a header a footer or a custom suplementary view
+/// be a header a footer or a custom supplementary view
 ///
 /// This struct is mainly a wrapper for an array of `CollectionSectionViewModel`
 /// which is a struct representing a section of `UICollectionView`
@@ -55,7 +55,7 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
     /// A lazy collection of the sections footer
     public var footers: LazyMapCollection<[Section], SupplementaryViewModel?> { sections.lazy.map { $0.footer } }
 
-    /// Return the `CellViewModel` corresponding to the given `IndexPath`
+    /// Returns the `CellViewModel` corresponding to the given `IndexPath`
     ///
     /// - Parameter indexPath: A valid index path for the given collectionViewModel
     /// - Returns: The viewModel representing the cell
@@ -63,7 +63,43 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
         sections[indexPath.section][indexPath.row]
     }
 
-    /// Return the `SupplementaryViewModel` corresponding to the given `SupplementaryViewKey`
+    /// Returns the `SupplementaryViewModel` corresponding to the header of the given section index
+    ///
+    /// - Parameter index: The section's index
+    /// - Returns: The viewModel representing the supplementary view if it exists
+    public subscript(header index: Int) -> SupplementaryViewModel? {
+        get { sections[index].header }
+        set { sections[index].header = newValue }
+    }
+
+    /// Returns the `SupplementaryViewModel` corresponding to the footer of the given section index
+    ///
+    /// - Parameter index: The section's index
+    /// - Returns: The viewModel representing the supplementary view if it exists
+    public subscript(footer index: Int) -> SupplementaryViewModel? {
+        get { sections[index].footer }
+        set { sections[index].footer = newValue }
+    }
+
+    /// Returns the `CellViewModel` corresponding to the given `IndexPath`
+    ///
+    /// - Parameter indexPath: A valid index path for the given collectionViewModel
+    /// - Returns: The viewModel representing the cell
+    public subscript(cellAt indexPath: IndexPath) -> CellViewModel {
+        get { sections[indexPath.section][indexPath.row] }
+        set { sections[indexPath.section][indexPath.row] = newValue }
+    }
+
+    /// Returns the `SupplementaryViewModel` corresponding to the given `SupplementaryViewKey`
+    ///
+    /// - Parameter key: A `SupplementaryViewKey` formed with an `IndexPath` and specific supplementaryView kind
+    /// - Returns: The viewModel representing the supplementary view if it exists
+    public subscript(supplementaryViewFor key: SupplementaryViewKey) -> SupplementaryViewModel? {
+        get { sections[key.indexPath.section][key.sectionKey] }
+        set { sections[key.indexPath.section][key.sectionKey]  = newValue }
+    }
+
+    /// Returns the `SupplementaryViewModel` corresponding to the given `SupplementaryViewKey`
     ///
     /// - Parameter key: A `SupplementaryViewKey` formed with an `IndexPath` and specific supplementaryView kind
     /// - Returns: The viewModel representing the supplementary view if it exists
@@ -73,7 +109,27 @@ public struct CollectionViewModel<SupplementaryViewModel, CellViewModel> {
         return sections[key.indexPath.section][sectionKey]
     }
 
-    /// Return the number of items in the section
+    /// Returns the `SupplementaryViewModel` corresponding to the header of footer of the given section index
+    /// This can also be achieved with `sections[sectionIndex].header`/`sections[sectionIndex].footer` or
+    /// even `headers[sectionIndex]`/`footers[sectionIndex`
+    ///
+    /// - Parameter kind: A supplementaryView kind that needs to be either `UICollectionView.elementKindSectionHeader` or `UICollectionView.elementKindSectionFooter` for the function not to return `nil`
+    /// - Parameter section: The section index of which you want to retrieve the viewModel
+    /// - Returns: The viewModel representing the supplementary view if it exists
+    public func headerOrFooterViewModel(forKind kind: String, inSection section: Int) -> SupplementaryViewModel? {
+        guard sections.indices.contains(section) else { return nil }
+        let section = sections[section]
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            return section.header
+        case UICollectionView.elementKindSectionFooter:
+            return section.footer
+        default:
+            return nil
+        }
+    }
+
+    /// Returns the number of items in the section
     ///
     /// - Parameter section: The section for which we want the number of items
     public func numberOfItemsInSection(_ section: Int) -> Int {

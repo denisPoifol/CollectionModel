@@ -13,11 +13,11 @@ import Foundation
 /// configure the cells of the tableView or the headers and footers
 public struct TableViewSectionViewModel<HeaderFooterViewModel, CellViewModel> {
 
-    /// The `SuplementaryViewModel` reprensenting the header of the section
+    /// The `SupplementaryViewModel` representing the header of the section
     public var header: HeaderFooterViewModel?
-    /// The `SuplementaryViewModel` reprensenting the footer of the section
+    /// The `SupplementaryViewModel` representing the footer of the section
     public var footer: HeaderFooterViewModel?
-    /// An `Array` of `CellViewModel` reprensenting the cells in the section
+    /// An `Array` of `CellViewModel` representing the cells in the section
     public var cells: [CellViewModel]
     /// An id for the section. This id enables to use *DifferenceKit* to animate the collectionView changes
     public var id: String
