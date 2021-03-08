@@ -12,7 +12,7 @@ import UIKit
 /// It is generic over two parameters `SupplementaryViewModel` and `CellViewModel`
 /// both parameters are self explanatory they should represent the models used to
 /// configure the cells of the collectionView or the supplementary views which could
-/// be a header a footer or a custom suplementary view
+/// be a header a footer or a custom supplementary view
 ///
 /// This struct is mainly a wrapper for an array of `CollectionSectionViewModel`
 /// which is a struct representing a section of `UICollectionView`

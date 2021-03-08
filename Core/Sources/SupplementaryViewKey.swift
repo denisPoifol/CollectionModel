@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Suplementary view are identified by an index path and their kind which is a string, `SupplementaryKey`
+/// Supplementary view are identified by an index path and their kind which is a string, `SupplementaryKey`
 /// is a simple struct that regroup both information to easily access your SupplementaryView viewModel.
 public struct SupplementaryViewKey: Hashable {
 
@@ -21,7 +21,7 @@ public struct SupplementaryViewKey: Hashable {
 }
 
 
-/// Suplementary view are identified by an index path and their kind which is a string, but in a given
+/// Supplementary view are identified by an index path and their kind which is a string, but in a given
 ///  section we only need a row indice. `SupplementaryViewSectionKey` is a simple struct that regroup
 ///  both information to easily access your SupplementaryView viewModel.
 public struct SupplementaryViewSectionKey: Hashable {

@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/CollectionModel.svg?style=flat)](https://cocoapods.org/pods/CollectionModel)
 
 The goal of this pod is to provide a data structure to represent what a collectionView/tableView is displaying.
-It enables to extract any business logic from the dataSource of your view to the part of your code that is responsible for generating its viewModel. Which help to enforce a better separation of conrcerns within your application, and keep your dataSources easily maintanable.
+It enables to extract any business logic from the dataSource of your view to the part of your code that is responsible for generating its viewModel. Which help to enforce a better separation of concerns within your application, and keep your dataSources easily maintanable.
 
 ## Example Application
 
@@ -64,11 +64,11 @@ For more detail you can look at the example application.
 ### CollectionViewModel
 
 `CollectionViewModel` is a struct representing as closely as possible the structure of a `UICollectionView`.
-It is generic over two parameters `SupplementaryViewModel` and `CellViewModel` both parameters are self explanatory they should represent the models used to configure the cells of the collectionView or the supplementary views which could be a header a footer or a custom suplementary view
+It is generic over two parameters `SupplementaryViewModel` and `CellViewModel` both parameters are self explanatory they should represent the models used to configure the cells of the collectionView or the supplementary views which could be a header a footer or a custom supplementary view
 
 This struct is mainly a wrapper for an array of `CollectionSectionViewModel` which is a struct representing a section of `UICollectionView`.
 
-`CollectionSectionViewModel` relies on an array of cellViewModels and a dictionary storing supplementaryViewModels where a key is `SupplementaryViewSectionKey` a couple of an index and kind for the suplementary view. Header and footer for the section are stored in their own variable appart from the dictionnary.
+`CollectionSectionViewModel` relies on an array of cellViewModels and a dictionary storing supplementaryViewModels where a key is `SupplementaryViewSectionKey` a couple of an index and kind for the supplementary view. Header and footer for the section are stored in their own variable appart from the dictionary.
 
 Implementing a collectionViewDataSource relying on `CollectionViewModel` is pretty straight forward if you only use one type of cell :
 ```Swift
